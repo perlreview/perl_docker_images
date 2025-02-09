@@ -5,6 +5,7 @@ on:
     push:
 jobs:
     perl:
+        runs-on: ubuntu
         container:
             image: briandfoy/perl5101-32bit:1.0
         steps:
