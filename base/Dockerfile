@@ -1,7 +1,6 @@
 FROM ubuntu:24.04
 MAINTAINER briandfoy@pobox.com
 LABEL org.opencontainers.image.authors="briandfoy@pobox.com" \
-	version="1.0.1" \
 	org.opencontainers.image.description="The base layer that includes everything common among the Perl docker images from The Perl Review" \
 	org.opencontainers.image.title="Base image for https://github.com/perlreview/perl_docker_images" \
 	org.opencontainers.image.licenses="Artistic-2.0" \
