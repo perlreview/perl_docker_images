@@ -13,6 +13,7 @@ LABEL org.opencontainers.image.authors="briandfoy@pobox.com" \
 	org.opencontainers.image.vendor="The Perl Review"
 
 RUN cpan -T Devel::PatchPerl \
+	&& cd /tmp \
 	&& curl -O https://www.cpan.org/src/5.0/perl-${PERL_VERSION}.tar.gz \
 	&& tar -xzf perl-${PERL_VERSION}.tar.gz \
 	&& cd perl-${PERL_VERSION} \
