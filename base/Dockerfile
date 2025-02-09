@@ -22,6 +22,4 @@ RUN apt-get update \
 	&& useradd -r -u 137 -g perlreview perlreview \
 	&& cpan -T Devel::PatchPerl
 
-USER perlreview
-
 CMD ["bash"]
