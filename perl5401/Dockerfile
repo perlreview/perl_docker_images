@@ -6,7 +6,6 @@ ARG REPO_DIR
 
 MAINTAINER briandfoy@pobox.com
 LABEL org.opencontainers.image.authors="briandfoy@pobox.com" \
-	org.opencontainers.image.description="Perl v5.40.1 with extras" \
 	org.opencontainers.image.title="Base image for https://github.com/perlreview/perl_docker_images" \
 	org.opencontainers.image.licenses="Artistic-2.0" \
 	org.opencontainers.image.url="https://github.com/perlreview/perl_docker_images" \
