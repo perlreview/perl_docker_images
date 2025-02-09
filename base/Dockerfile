@@ -16,6 +16,7 @@ RUN apt-get update \
 		git \
 		perl-doc \
 		perl-modules \
+		ca-certificates \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& groupadd -g 137 perlreview \
