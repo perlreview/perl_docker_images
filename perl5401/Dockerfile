@@ -20,7 +20,7 @@ RUN cpan -T Devel::PatchPerl \
 	&& patchperl \
 	&& ./Configure -des -Dprefix=/usr/local \
 	&& make install \
-	&& cd /repo \
+	&& cd \
 	&& rm -rf /tmp/* \
 	&& /usr/local/bin/cpan -T \
 		App::Cpan \
