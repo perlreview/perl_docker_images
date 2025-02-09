@@ -1,4 +1,4 @@
-FROM perlreview:base
+FROM perlreview/base:${BASE_TAG}
 
 MAINTAINER briandfoy@pobox.com
 LABEL org.opencontainers.image.authors="briandfoy@pobox.com" \
@@ -9,13 +9,10 @@ LABEL org.opencontainers.image.authors="briandfoy@pobox.com" \
 	org.opencontainers.image.source="https://github.com/perlreview/perl_docker_images/perl5401/Dockerfile" \
 	org.opencontainers.image.vendor="The Perl Review"
 
-WORKDIR /tmp
-
-RUN \
-	cpan -T Devel::PatchPerl \
-	&& curl -O https://www.cpan.org/src/5.0/perl-5.40.1.tar.gz \
-	&& tar -xzf perl-5.40.1.tar.gz \
-	&& cd perl-5.40.1 \
+RUN cpan -T Devel::PatchPerl \
+	&& curl -O https://www.cpan.org/src/5.0/perl-${PERL_VERSION}.tar.gz \
+	&& tar -xzf perl-${PERL_VERSION}.tar.gz \
+	&& cd perl-${PERL_VERSION} \
 	&& patchperl \
 	&& ./Configure -des -Dprefix=/usr/local \
 	&& make install \
