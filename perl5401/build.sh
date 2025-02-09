@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BASE_TAG=1.0.3
+BASE_TAG=$(grep ^VERSION ../base/build.sh | xargs perl -le 'print +(split/=/,$ARGV[0])[-1]')
 COMMIT=$(git rev-parse HEAD)
 DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 PERL_VERSION=5.40.1
