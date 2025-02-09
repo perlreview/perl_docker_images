@@ -5,9 +5,9 @@ on:
     push:
 jobs:
     perl:
-        runs-on: ubuntu
+        runs-on: ubuntu-24.04
         container:
-            image: briandfoy/perl5101-32bit:1.0
+            image: briandfoy/perl5401:1.0
         steps:
             - uses: actions/checkout@v3
             - name: Platform check
