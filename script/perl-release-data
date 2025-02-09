@@ -1,0 +1,75 @@
+#!perl
+use v5.10;
+
+$|++;
+
+use JSON;
+use Mojo::Util qw(dumper);
+use Mojo::UserAgent;
+
+my $data_dir = 'data';
+
+my $ua = Mojo::UserAgent->new;
+
+my $base_url = Mojo::URL->new('https://www.cpan.org/src/5.0/');
+
+my $dom = $ua
+    ->get($base_url)
+    ->res
+    ->dom;
+
+my $hrefs = $dom->find('a');
+create_latest($hrefs);
+create_checksums($hrefs);
+
+sub create_latest ($hrefs) {
+	my $perls = $hrefs
+		->map( sub { $_->attr('href') } )
+		->grep( sub { ! /bz2 | RC\d/x } )
+		->map( sub {
+			[ $_, /perl-5\.(\d+)\.(\d+)\./ ]
+			} )
+		->to_array;
+
+	my %latest;
+	foreach my $tuple ( $perls->@* ) {
+		$latest{ $tuple->[1] } = $tuple if $latest{ $tuple->[1] }[2] < $tuple->[2];
+		}
+
+	mkdir $data_dir unless -d $data_dir;
+	open my $fh, ">:utf8", "$data_dir/latest.json";
+	print {$fh} JSON->new->pretty->encode(\%latest);
+	}
+
+sub create_checksums ($hrefs) {
+	my $checksum_pattern = qr/(md5|sha(?:1|256))\.txt\z/;
+	my $file_pattern = qr/perl-(5\.(\d*[02468])\.(\d+))\./;
+
+	my $checksums = $hrefs
+		->map( sub { $_->attr('href') } )
+		->grep( sub { (! /bz2 | RC\d/x) and /$checksum_pattern/ } )
+		->map( sub {
+			return unless /^perl/;
+			return unless /$checksum_pattern/;
+			return unless /$file_pattern/;
+
+			my $url = $base_url->clone->path($_);
+			#print STDERR "Fetching $url -> ";
+
+			my $checksum = $ua->get($url)->res->body;
+			[ /$file_pattern/, /$checksum_pattern/, $_, $checksum ];
+			} )
+		->to_array;
+
+	my %checksums;
+	foreach my $tuple ( $checksums->@* ) {
+		my( $V ) = $tuple->[0];
+		$checksums{$V}->@{qw(version minor point type file digest)} = $tuple->@*;
+		}
+
+	mkdir $data_dir unless -d $data_dir;
+	open my $fh, ">:utf8", "$data_dir/checksums.json";
+	print {$fh} JSON->new->pretty->encode(\%checksums);
+	};
+
+__END__
