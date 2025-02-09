@@ -39,6 +39,7 @@ RUN cpan -T Devel::PatchPerl \
 		Test::Pod::Coverage \
 		Test::Output \
 		YAML \
-		XML::Entities
+		XML::Entities \
+	&& rm -rf /root/.cpan
 
 CMD [ "/usr/local/bin/perl", "-e" ]
