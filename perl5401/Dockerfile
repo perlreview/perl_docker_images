@@ -1,4 +1,8 @@
+ARG BASE_TAG
 FROM perlreview/base:${BASE_TAG}
+
+ARG PERL_VERSION
+ARG REPO_DIR
 
 MAINTAINER briandfoy@pobox.com
 LABEL org.opencontainers.image.authors="briandfoy@pobox.com" \
