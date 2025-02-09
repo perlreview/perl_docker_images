@@ -9,7 +9,7 @@ LABEL org.opencontainers.image.authors="briandfoy@pobox.com" \
 	org.opencontainers.image.title="Base image for https://github.com/perlreview/perl_docker_images" \
 	org.opencontainers.image.licenses="Artistic-2.0" \
 	org.opencontainers.image.url="https://github.com/perlreview/perl_docker_images" \
-	org.opencontainers.image.source="https://github.com/perlreview/perl_docker_images/perl5401/Dockerfile" \
+	org.opencontainers.image.source="https://github.com/perlreview/perl_docker_images/${REPO_DIR}/Dockerfile" \
 	org.opencontainers.image.vendor="The Perl Review"
 
 RUN cpan -T Devel::PatchPerl \
