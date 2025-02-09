@@ -5,7 +5,7 @@ COMMIT=$(git rev-parse HEAD)
 DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 PERL_VERSION=5.40.1
 NAME=perl-$PERL_VERSION
-VERSION=1.0.0
+VERSION=1.0.1
 TAG=perlreview/$NAME:$VERSION
 REPO_DIR=$( dirname $0 | xargs readlink -f | xargs basename )
 
