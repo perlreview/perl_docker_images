@@ -7,6 +7,7 @@ PERL_VERSION=5.40.1
 NAME=perl-$PERL_VERSION
 VERSION=1.0.0
 TAG=perlreview/$NAME:$VERSION
+REPO_DIR=$( dirname $0 | xargs readlink -f | xargs basename )
 
 # https://www.docker.com/blog/docker-best-practices-using-tags-and-labels-to-manage-docker-image-sprawl/
 docker build . -t $TAG \
@@ -16,4 +17,5 @@ docker build . -t $TAG \
 	--label="version=$VERSION" \
 	--build-arg BASE_TAG=$BASE_TAG \
 	--build-arg PERL_VERSION=$PERL_VERSION \
+	--build-arg REPO_DIR=$REPO_DIR \
 	&& docker push $TAG
