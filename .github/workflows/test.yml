@@ -1,0 +1,17 @@
+---
+name: test-my-image
+
+on:
+    push:
+jobs:
+    perl:
+        container:
+            image: briandfoy/perl5101-32bit:1.0
+        steps:
+            - uses: actions/checkout@v3
+            - name: Platform check
+              run: uname -a
+            - name: Perl check
+              run: |
+                which perl
+                perl -V:intsize
