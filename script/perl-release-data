@@ -142,18 +142,23 @@ sub create_checksums ($hrefs, $start_fresh = 0) {
 			} )
 		->to_array;
 
+	say STDERR dumper( $checksums );
+
 	my %checksums;
 	foreach my $tuple ( $checksums->@* ) {
 		my( $version, $minor, $point, $type, $file, $digest) = $tuple->@*;
 
-		my $archive = $file =~ s/\.(?:gz|xz|bz2)\K.*//r;
+		my $archive = $file =~ s/\.(gz|xz|bz2)\K.*//r;
+		my $compression = $1;
 		my $url = $base_url->clone->path($archive);
 
-		$checksums{$version}{$type}   = $digest;
-		$checksums{$version}{'minor'} = $minor;
-		$checksums{$version}{'point'} = $point;
-		$checksums{$version}{'url'}  = "$url";
+		$checksums{$version}{$compression}{$type}   = $digest;
+		$checksums{$version}{$compression}{'minor'} = $minor;
+		$checksums{$version}{$compression}{'point'} = $point;
+		$checksums{$version}{$compression}{'url'}  = "$url";
 		}
+
+	say STDERR dumper( \%checksums );
 
 	mkdir $data_dir unless -d $data_dir;
 	open my $fh, ">:utf8", $file
@@ -204,4 +209,5 @@ sub wrap_data ($ref) {
 
 	\%data;
 	}
+
 __END__
