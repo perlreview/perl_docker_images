@@ -100,7 +100,7 @@ sub create_latest ($hrefs, $start_fresh = 0 ) {
 
 	my %latest;
 	foreach my $tuple ( $perls->@* ) {
-		$latest{ $tuple->[1] } = $tuple if $latest{ $tuple->[1] }[2] < $tuple->[2];
+		$latest{ $tuple->[1] } = $tuple if $latest{ $tuple->[1] }[2] <= $tuple->[2];
 		}
 
 	mkdir $data_dir unless -d $data_dir;
