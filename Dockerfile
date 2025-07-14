@@ -57,5 +57,5 @@ RUN cpan -T Devel::PatchPerl \
 	&& rm -rf /root/.cpan
 
 USER ${USERNAME}
-
+ENV PATH="/usr/local/bin:${PATH}"
 CMD [ "/usr/local/bin/perl", "-de0" ]
