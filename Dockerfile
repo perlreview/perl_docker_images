@@ -1,6 +1,6 @@
 ARG BASE_NAME=base
 ARG BASE_TAG=latest
-ARG DOCKER_HUB_ACCOUNT=theperlreview
+ARG DOCKER_HUB_ACCOUNT=perlreview
 
 FROM ${DOCKER_HUB_ACCOUNT}/${BASE_NAME}:${BASE_TAG}
 ARG BUILDKIT_SBOM_SCAN_STAGE=true
@@ -34,31 +34,13 @@ RUN cd /tmp \
 	&& patchperl \
 	&& ./Configure -des -Dprefix=/usr/local \
 	&& make install \
-	&& cd \
+	&& cd /tmp \
+	&& git clone https://github.com/briandfoy/app-cpan-upgraded.git \
+	&& cd app-cpan-upgraded \
+	&& /usr/local/bin/cpan . \
 	&& rm -rf /tmp/* \
-	&& /usr/local/bin/cpan -T \
-		App::Cpan \
-		App::cpanminus \
-		Devel::Cover \
-		Devel::Cover::Report::Coveralls \
-		ExtUtils::MakeMaker \
-		HTTP::Tiny \
-		IO::Socket::SSL \
-		LWP \
-		LWP::Protocol::https \
-		Mojolicious \
-		Term::ReadLine \
-		Test::CPAN::Changes \
-		Test::Exception \
-		Test::Manifest \
-		Test::More \
-		Test::Pod \
-		Test::Pod::Coverage \
-		Test::Output \
-		YAML \
-		XML::Entities \
+	&& /usr/local/bin/cpan App::Cpan::Upgraded \
 	&& rm -rf /root/.cpan
 
-USER ${USERNAME}
 ENV PATH="/usr/local/bin:${PATH}"
 CMD [ "/usr/local/bin/perl", "-de0" ]

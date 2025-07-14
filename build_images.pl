@@ -49,7 +49,7 @@ foreach my $version ( $latest->@* ) {
 	say dumper($info);
 
 	$args{perl_version} = $version;
-	$args{name}         = "perl-$version";
+	$args{name}         = "perl-$version-base";
 	$args{tag}          = "$args{account}/$args{name}:$args{image_version}";
 	$args{latest_tag}   = "$args{account}/$args{name}:latest";
 	$args{digest}       = $info->{sha256};
