@@ -98,6 +98,7 @@ sub create_latest ($hrefs, $start_fresh = 0 ) {
 			} )
 		->to_array;
 
+	say "perls: " . dumper($perls);
 	my %latest;
 	foreach my $tuple ( $perls->@* ) {
 		$latest{ $tuple->[1] } = $tuple if $latest{ $tuple->[1] }[2] <= $tuple->[2];
@@ -142,7 +143,7 @@ sub create_checksums ($hrefs, $start_fresh = 0) {
 			} )
 		->to_array;
 
-	say STDERR dumper( $checksums );
+	# say STDERR dumper( $checksums );
 
 	my %checksums;
 	foreach my $tuple ( $checksums->@* ) {
@@ -158,7 +159,7 @@ sub create_checksums ($hrefs, $start_fresh = 0) {
 		$checksums{$version}{$compression}{'url'}  = "$url";
 		}
 
-	say STDERR dumper( \%checksums );
+	# say STDERR dumper( \%checksums );
 
 	mkdir $data_dir unless -d $data_dir;
 	open my $fh, ">:utf8", $file
