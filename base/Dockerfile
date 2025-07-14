@@ -2,7 +2,6 @@ ARG BASE_IMAGE=debian:bookworm-slim
 FROM ${BASE_IMAGE}
 
 ARG AUTHOR
-ARG USERNAME
 ARG VENDOR
 ARG WORKDIR=/tmp
 
@@ -16,7 +15,6 @@ LABEL org.opencontainers.image.authors="${AUTHOR}" \
 
 WORKDIR ${WORKDIR}
 
-# Do I need to install the
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
 		build-essential \
@@ -25,20 +23,15 @@ RUN apt-get update \
 		curl \
 		dpkg-dev \
 		git \
+		jq \
+		libdevel-patchperl-perl \
 		libssl-dev \
-		perl-modules \
+	&& curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg --output /usr/share/keyrings/githubcli-archive-keyring.gpg \
+	&& chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
+	&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+    && apt update \
+    && apt-get -y install gh \
 	&& apt-get clean \
-	&& rm -rf /var/cache/apt/* /var/lib/apt/lists/* \
-	&& groupadd -g 137 $USERNAME \
-	&& useradd -D \
-	&& useradd -m -r -u 137 -g $USERNAME $USERNAME \
-	&& /usr/bin/cpan -v \
-	&& /usr/bin/perl -pi -e "s/'m(?:ake|build)pl_arg' => \Kq\[.*?\],/q[],/" /root/.cpan/CPAN/MyConfig.pm \
-	&& /usr/bin/perl /usr/bin/cpan -T Module::Runtime \
-	&& /usr/bin/perl /usr/bin/cpan -T Devel::PatchPerl
+	&& rm -rf /var/cache/apt/* /var/lib/apt/lists/*
 
 RUN rm -rf ${WORKDIR}/*
-
-USER $USERNAME
-
-CMD ["bash"]
