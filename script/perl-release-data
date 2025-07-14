@@ -92,7 +92,7 @@ sub create_latest ($hrefs, $start_fresh = 0 ) {
 
 	my $perls = $hrefs
 		->map( sub { $_->attr('href') } )
-		->grep( sub { ! /bz2 | RC\d/x } )
+		->grep( sub { ! /bz2 | RC\d | \.txt | \.xz/x } )
 		->map( sub {
 			[ $_, /perl-5\.(\d+)\.(\d+)\./ ]
 			} )
