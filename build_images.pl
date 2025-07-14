@@ -2,7 +2,7 @@
 use v5.30;
 use utf8;
 use strict;
-use warnings;
+use experimental qw(signatures);
 
 use JSON::PP qw(decode_json);
 use Mojo::File;
@@ -61,9 +61,7 @@ foreach my $version ( $latest->@* ) {
 	}
 
 # https://www.docker.com/blog/generate-sboms-with-buildkit/
-sub build_image {
-	my( $args ) = @_;
-
+sub build_image ($args) {
 	say STDERR dumper($args);
 
 	local $ENV{BUILDKIT_PROGRESS} = 'plain';
