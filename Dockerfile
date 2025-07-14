@@ -22,8 +22,9 @@ LABEL org.opencontainers.image.authors="briandfoy@pobox.com" \
 	org.opencontainers.image.source="https://github.com/perlreview/perl_docker_images" \
 	org.opencontainers.image.vendor="The Perl Review"
 
-RUN cpan -T Devel::PatchPerl \
-	&& cd /tmp \
+USER root
+
+RUN cd /tmp \
 	&& echo PERL_VERION ${PERL_VERSION} \
 	&& curl -s -fLO ${PERL_URL} \
 	&& echo "${PERL_ARCHIVE_DIGEST} ${PERL_URL_BASENAME}"  \
@@ -39,11 +40,13 @@ RUN cpan -T Devel::PatchPerl \
 		App::Cpan \
 		App::cpanminus \
 		Devel::Cover \
+		Devel::Cover::Report::Coveralls \
 		ExtUtils::MakeMaker \
 		HTTP::Tiny \
 		IO::Socket::SSL \
 		LWP \
 		LWP::Protocol::https \
+		Mojolicious \
 		Term::ReadLine \
 		Test::CPAN::Changes \
 		Test::Exception \
