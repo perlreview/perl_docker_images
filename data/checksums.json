@@ -1,1080 +1,1134 @@
 {
-   "created_at" : 1742650757,
-   "created_by" : "script/perl-release-data",
+   "created_at" : 1752446544,
    "repo" : "https://github.com/perlreview/perl_docker_images.git",
+   "created_by" : "script/perl-release-data",
    "data" : {
-      "5.8.9" : {
+      "5.42.0" : {
          "gz" : {
-            "url" : "https://www.cpan.org/src/5.0/perl-5.8.9.tar.gz",
-            "sha1" : "d5ba4f3c6903e3424bc16c2748848440e446cd54",
-            "sha256" : "60dfe024286299b547895b6bc8f41c20c7e83d292f3a406e113ba1951aa38da1",
-            "point" : "9",
-            "minor" : "8",
-            "md5" : "2c8d78a61fb8c4c2c19fc514eb591500"
-         }
-      },
-      "5.40.1" : {
-         "gz" : {
-            "minor" : "40",
-            "md5" : "091b9ff56b612b3833e59173f9b13f4c",
-            "point" : "1",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.40.1.tar.gz",
-            "sha1" : "e203dbc5dd5ab69bf37b658590557c681562af07",
-            "sha256" : "02f8c45bb379ed0c3de7514fad48c714fd46be8f0b536bfd5320050165a1ee26"
+            "sha1" : "0af1c8fb6554936e243061e63fd1708f159261f1",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.42.0.tar.gz",
+            "md5" : "a496498b7bd6aef6085b96a9fd6e09fa",
+            "minor" : "42",
+            "point" : "0",
+            "sha256" : "e093ef184d7f9a1b9797e2465296f55510adb6dab8842b0c3ed53329663096dc"
          },
          "xz" : {
-            "sha1" : "4ffe5246c791df884363aed05ba81ba41cb02084",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.40.1.tar.xz",
-            "sha256" : "dfa20c2eef2b4af133525610bbb65dd13777ecf998c9c5b1ccf0d308e732ee3f",
-            "point" : "1",
-            "md5" : "bab3547a5cdf2302ee0396419d74a42e",
-            "minor" : "40"
+            "md5" : "7a6950a9f12d01eb96a9d2ed2f4e0072",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.42.0.tar.xz",
+            "sha1" : "3b557f28dcb412b115d9628c37fc94b2fda08384",
+            "minor" : "42",
+            "point" : "0",
+            "sha256" : "73cf6cc1ea2b2b1c110a18c14bbbc73a362073003893ffcedc26d22ebdbdd0c3"
          }
       },
-      "5.24.2" : {
-         "xz" : {
-            "point" : "2",
-            "minor" : "24",
-            "md5" : "b7c027975a476dbb9aa7202f760d8eca",
-            "sha256" : "b25dd465ef32edf853078eb540b26243db0a3b5e1b1cc84393703d9564be67c0",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.24.2.tar.xz",
-            "sha1" : "61761989df70b10470bc387050974be72e33217e"
-         },
+      "5.38.3" : {
          "gz" : {
-            "minor" : "24",
-            "md5" : "62a52f0f743fa461af449bd18d63886c",
-            "point" : "2",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.24.2.tar.gz",
-            "sha1" : "82172d72aca2cb4b0d7d00b9fbff3501c2ff03d6",
-            "sha256" : "609be8a45eca82e5c7fb045e62cbdad08cc5d6324b8dc5b362341d4502929ef4"
-         }
-      },
-      "5.26.3" : {
-         "xz" : {
-            "url" : "https://www.cpan.org/src/5.0/perl-5.26.3.tar.xz",
-            "sha1" : "ca73432ac07288fdce2063f5e09c642e28584226",
-            "sha256" : "e0a17cdaed5304aea1783e507e56bb0001dd72c46f211553ead3a580c3f38135",
-            "minor" : "26",
-            "md5" : "218d73f2334d2f3fdaff5a1f35358247",
+            "minor" : "38",
+            "md5" : "d53b1d50db50825305b01c3f8699023d",
+            "sha1" : "c995fbc1ece05f3d0e2d7ebbe7d0896baea6f860",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.38.3.tar.gz",
+            "sha256" : "8a8033859dd1d75eb0c9158eedd7384df1af6b46a2a4e85073b07e6cc7c5b873",
             "point" : "3"
          },
-         "gz" : {
-            "url" : "https://www.cpan.org/src/5.0/perl-5.26.3.tar.gz",
-            "sha1" : "940e1739dd979a284f343dff57ddcbf7f555b928",
-            "sha256" : "b75ae40de8292fa53021b35eb3552fcaf65d7891ce4c5b6668d665cb0233c493",
-            "point" : "3",
-            "md5" : "34b92527893956ab02d23a205c71df53",
-            "minor" : "26"
-         }
-      },
-      "5.8.5" : {
-         "gz" : {
-            "sha1" : "e7f8e5fc1d89b2641206cc69e2cffd8b42eb2ebe",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.8.5.tar.gz",
-            "sha256" : "3dd1cba53ce6348ed5119b5f7d1ef6cd4d165f89e4ecc7c21adf7932e0df2709",
-            "point" : "5",
-            "minor" : "8",
-            "md5" : "49baa8d7d29b4a9713c06edeb81e6b1b"
-         }
-      },
-      "5.8.4" : {
-         "gz" : {
-            "sha256" : "89dcc463f88e0b785ee2cf2662d97c6b7d045393283664876370970a09b8cbef",
-            "sha1" : "9614d8422301cf63939b32494c47d7a1a94942df",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.8.4.tar.gz",
-            "md5" : "912050a9cb6b0f415b76ba56052fb4cf",
-            "minor" : "8",
-            "point" : "4"
-         }
-      },
-      "5.8.1" : {
-         "gz" : {
-            "md5" : "87cf132f1fbf23e780f0b218046438a6",
-            "minor" : "8",
-            "point" : "1",
-            "sha1" : "838a2f55927d14a9c8f239ebd8f40e33572f2800",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.8.1.tar.gz",
-            "sha256" : "90f5ef25b993cea2def2648d7bca9e351f2e417004cdc76fa02a9ec235ce4490"
-         }
-      },
-      "5.36.0" : {
-         "gz" : {
-            "md5" : "68a2683bb79979c26ec57876abb7f303",
-            "minor" : "36",
-            "point" : "0",
-            "sha256" : "e26085af8ac396f62add8a533c3a0ea8c8497d836f0689347ac5abd7b7a4e00a",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.36.0.tar.gz",
-            "sha1" : "5fa41c8dffd9700f0c8427de7dd19f06b095fa6d"
-         },
          "xz" : {
-            "md5" : "826e42da130011699172fd655e49cfa2",
-            "minor" : "36",
-            "point" : "0",
-            "sha256" : "0f386dccbee8e26286404b2cca144e1005be65477979beb9b1ba272d4819bcf0",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.36.0.tar.xz",
-            "sha1" : "938c56a77ae094eb7f5019318a5e4efb2d9c74fa"
+            "point" : "3",
+            "sha256" : "da4c8ae1e91d60a52e02e0009618fc6aa62e1ac90b3f302969e2cf490c122dcc",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.38.3.tar.xz",
+            "sha1" : "382bf91ebc427c3d901fbde126cb7d4f620ea104",
+            "md5" : "c333078519edb63ae3ddffc6f27a8be9",
+            "minor" : "38"
          }
       },
-      "5.38.2" : {
+      "5.40.2" : {
          "gz" : {
-            "url" : "https://www.cpan.org/src/5.0/perl-5.38.2.tar.gz",
-            "sha1" : "bcb6782ae5ddeca45cbcb263bef8cd3dc9040679",
-            "sha256" : "a0a31534451eb7b83c7d6594a497543a54d488bc90ca00f5e34762577f40655e",
+            "sha256" : "10d4647cfbb543a7f9ae3e5f6851ec49305232ea7621aed24c7cfbb0bef4b70d",
             "point" : "2",
-            "minor" : "38",
-            "md5" : "ef767335cb36f4e2449049741ef96349"
+            "md5" : "f17df9d885cd1f250574ae29d1d4f8e2",
+            "sha1" : "79d6dffc5a7449f31e7c9985d6b8c1d445dfac65",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.40.2.tar.gz",
+            "minor" : "40"
          },
          "xz" : {
-            "sha1" : "af1d5f9e0499f3cfa4736433631aebf7624714da",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.38.2.tar.xz",
-            "sha256" : "d91115e90b896520e83d4de6b52f8254ef2b70a8d545ffab33200ea9f1cf29e8",
-            "minor" : "38",
-            "md5" : "d3957d75042918a23ec0abac4a2b7e0a",
+            "md5" : "9ad7a269dc4053cdbeecd4fde444291b",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.40.2.tar.xz",
+            "sha1" : "661fe9ee085ca0aec8ddd65e055bee922af12663",
+            "minor" : "40",
+            "sha256" : "0551c717458e703ef7972307ab19385edfa231198d88998df74e12226abf563b",
             "point" : "2"
          }
       },
-      "5.8.3" : {
+      "5.36.1" : {
          "gz" : {
-            "md5" : "6d2b389f8c6424b7af303f417947714f",
+            "sha256" : "68203665d8ece02988fc77dc92fccbb297a83a4bb4b8d07558442f978da54cc1",
+            "point" : "1",
+            "md5" : "ecea76f0433c18e73508ac53eb4a7c5d",
+            "sha1" : "754f3c9201c25d04f9cb0bd929a6fc36dcc74baf",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.36.1.tar.gz",
+            "minor" : "36"
+         },
+         "xz" : {
+            "point" : "1",
+            "sha256" : "bd91217ea8a8c8b81f21ebbb6cefdf0d13ae532013f944cdece2cd51aef4b6a7",
+            "minor" : "36",
+            "md5" : "825f6b1d7e03b22522e0bdb992fbb728",
+            "sha1" : "7b766266af08a6cef0487308e80b40d5d8069df7",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.36.1.tar.xz"
+         }
+      },
+      "5.8.6" : {
+         "gz" : {
             "minor" : "8",
-            "point" : "3",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.8.3.tar.gz",
-            "sha1" : "4c6f2aaa1b3a1d44535a1b54738d494e8fb90222",
-            "sha256" : "4ca8bd5f20fcd9e4eddf16b44efa08c4969e31d02d7e0e91224b3ef5f657c1c6"
+            "md5" : "8d4aa4e061fd5bc0c39e4f0a63267880",
+            "sha1" : "6ca979c94f4f59dd417d99c9a5196522540a7c0e",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.8.6.tar.gz",
+            "point" : "6",
+            "sha256" : "f6da39751b74033df4a132c4dde0e58705af4907f06ea46a279e1f376d5e4683"
          }
       },
-      "5.12.2" : {
+      "5.6.0" : {
          "gz" : {
-            "sha1" : "c157f214a93ce20fc06dc9d9c902c05ad1327cb1",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.12.2.tar.gz",
-            "sha256" : "cf888340021d5a2d1238bbd9b8b55aaf420a848d46e4d317cb8567f86ceb1022",
-            "minor" : "12",
-            "md5" : "af2df531d46b77fdf0d97eecb03eddb2",
-            "point" : "2"
-         }
-      },
-      "5.20.1" : {
-         "gz" : {
-            "md5" : "7a195abb7d6769f751e90c7d30dcf2e0",
-            "minor" : "20",
-            "point" : "1",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.20.1.tar.gz",
-            "sha1" : "dad920583cab07e96bb8860a70eebc5fa9cf8e4d",
-            "sha256" : "fef10210f9e6f4dc2d190be0aee8e1fa2af664630f1d415868d33eebca26d4b5"
-         }
-      },
-      "5.18.1" : {
-         "gz" : {
-            "minor" : "18",
-            "md5" : "304cb5bd18e48c44edd6053337d3386d",
-            "point" : "1",
-            "sha1" : "524a10ba76e394e5d40b319f5609cb4c4a96f564",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.18.1.tar.gz",
-            "sha256" : "655e11a8ffba8853efcdce568a142c232600ed120ac24aaebb4e6efe74e85b2b"
-         }
-      },
-      "5.10.0" : {
-         "gz" : {
-            "point" : "0",
-            "minor" : "10",
-            "md5" : "d2c39b002ebfd2c3c5dba589365c5a71",
-            "sha256" : "94464a0d374fa63226eee56e0bb3d35564f9d8391a1a8d9f0055805ec25f3b2e",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.10.0.tar.gz",
-            "sha1" : "adf73606dd5248af7ccdd735bcaa0e628ea75b3c"
-         }
-      },
-      "5.28.0" : {
-         "gz" : {
-            "sha256" : "7e929f64d4cb0e9d1159d4a59fc89394e27fa1f7004d0836ca0d514685406ea8",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.28.0.tar.gz",
-            "sha1" : "0622f86160e8969633cbd21a2cca9e11ae1f8c5a",
-            "point" : "0",
-            "minor" : "28",
-            "md5" : "c7c63781745e280e08401a306a83bfb8"
-         },
-         "xz" : {
-            "sha256" : "059b3cb69970d8c8c5964caced0335b4af34ac990c8e61f7e3f90cd1c2d11e49",
-            "sha1" : "c0e9e7a0dea97ec9816687d865fd461a99ef185c",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.28.0.tar.xz",
-            "md5" : "f3245183c0a08f65e94a3333995af08e",
-            "minor" : "28",
+            "md5" : "b2940e2cc6312bcfa52355b684e70b9d",
+            "sha1" : "a2e9da9c82116a9094cc0f92c248c4339fda89fa",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.6.0.tar.gz",
+            "minor" : "6",
+            "sha256" : "aec3af25bc07f288e8fda30812c3d2acbe13e52fcf421eb552d1f3d63a413078",
             "point" : "0"
          }
       },
-      "5.32.1" : {
+      "5.30.1" : {
          "gz" : {
+            "sha256" : "bf3d25571ff1ee94186177c2cdef87867fd6a14aa5a84f0b1fb7bf798f42f964",
             "point" : "1",
-            "minor" : "32",
-            "md5" : "40dff18daf18178c7fc4579451be38ef",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.32.1.tar.gz",
-            "sha1" : "e16a6db69d2071232f442f4052b1ddefb3bac6f9",
-            "sha256" : "03b693901cd8ae807231b1787798cf1f2e0b8a56218d07b7da44f784a7caeb2c"
+            "md5" : "6438eb7b8db9bbde28e01086de376a46",
+            "sha1" : "905617fbc5802d59914be2a26a604dee52dd13b3",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.30.1.tar.gz",
+            "minor" : "30"
          },
          "xz" : {
-            "md5" : "7f104064b906ad8c7329ca5e409a32d7",
-            "minor" : "32",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.30.1.tar.xz",
+            "sha1" : "4bc190b6ac368f573e6a028f91430f831d40d30a",
+            "md5" : "f399f3aaee90ddcff5eadd3bccdaacc0",
+            "minor" : "30",
             "point" : "1",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.32.1.tar.xz",
-            "sha1" : "1fb4f710d139da1e1a3e1fa4eaba201fcaa8e18e",
-            "sha256" : "57cc47c735c8300a8ce2fa0643507b44c4ae59012bfdad0121313db639e02309"
+            "sha256" : "7336cd3ed0535eb61b76a71350effcfa7c88b44faf37d64d70952ced5d38cd35"
+         }
+      },
+      "5.34.3" : {
+         "xz" : {
+            "point" : "3",
+            "sha256" : "0b15c830a9a295c9f9439b6cda389300f0b18092686eaef47fbc9c92f5930ee1",
+            "minor" : "34",
+            "md5" : "6280e464fa07fa0eb1377a9424c1c3a5",
+            "sha1" : "947ee746fae365de7522d1742a354b70dfa12123",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.34.3.tar.xz"
+         },
+         "gz" : {
+            "url" : "https://www.cpan.org/src/5.0/perl-5.34.3.tar.gz",
+            "sha1" : "cd8084d884e27d25acd4b90ba3103b5a54ec3d96",
+            "md5" : "02d149ac43ac65f72e850cda31bcde9d",
+            "minor" : "34",
+            "point" : "3",
+            "sha256" : "5b12f62863332b2a5f54102af9cdf8c010877e4bf3294911edbd594b2a1e8ede"
          }
       },
       "5.6.2" : {
          "gz" : {
             "minor" : "6",
-            "md5" : "6aa648d086ecda5400de3472dbe1ebfe",
-            "point" : "2",
-            "sha256" : "a5e66f6ebf701b0567f569f57cae82abf5ce57af70a2b45ae71323b61f49134e",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.6.2.tar.gz",
             "sha1" : "266269fb550d093816c8147b882fac2ffea4388c",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.6.2.tar.gz"
-         }
-      },
-      "5.26.2" : {
-         "gz" : {
-            "minor" : "26",
-            "md5" : "dc0fea097f3992a8cd53f8ac0810d523",
-            "point" : "2",
-            "sha256" : "572f9cea625d6062f8a63b5cee9d3ee840800a001d2bb201a41b9a177ab7f70d",
-            "sha1" : "5dc74e667250a663d8f3114869e13ba2869bf6a9",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.26.2.tar.gz"
-         },
-         "xz" : {
-            "minor" : "26",
-            "md5" : "1fa1b53eeff76aa37b17bfc9b2771671",
-            "point" : "2",
-            "sha256" : "0f8c0fb1b0db4681adb75c3ba0dd77a0472b1b359b9e80efd79fc27b4352132c",
-            "sha1" : "bfa5c7921ed7bf5e035dbf2f7ff81367b81e372c",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.26.2.tar.xz"
-         }
-      },
-      "5.24.3" : {
-         "gz" : {
-            "point" : "3",
-            "md5" : "b25f1b1a0082e9e2043eb3c13bba6044",
-            "minor" : "24",
-            "sha256" : "cb009a5107bd99b4e92e3a73ecf03159b1f166e26bf44c9ab8de093c0bea57d4",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.24.3.tar.gz",
-            "sha1" : "1b66e381a8daaef79fc92b2855b9f5c70a496520"
-         },
-         "xz" : {
-            "point" : "3",
-            "md5" : "e960a8e9f6585205cacb913e97657cb6",
-            "minor" : "24",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.24.3.tar.xz",
-            "sha1" : "4fd303359b0643648b9ec504c90f832229b9a53c",
-            "sha256" : "03fe3e4ea39d2a4982703572599a80f3d5f368a1359ed89746ea1d8bec6cfbba"
-         }
-      },
-      "5.34.0" : {
-         "gz" : {
-            "url" : "https://www.cpan.org/src/5.0/perl-5.34.0.tar.gz",
-            "sha1" : "870b4e1ffe33f94a4996a4acbbcebb8422c5e73a",
-            "sha256" : "551efc818b968b05216024fb0b727ef2ad4c100f8cb6b43fab615fa78ae5be9a",
-            "minor" : "34",
-            "md5" : "2acf2ef147e41730e572251ed079bc1a",
-            "point" : "0"
-         },
-         "xz" : {
-            "point" : "0",
-            "md5" : "df7ecb0653440b26dc951ad9dbfab517",
-            "minor" : "34",
-            "sha256" : "82c2e5e5c71b0e10487a80d79140469ab1f8056349ca8545140a224dbbed7ded",
-            "sha1" : "d461e206a1dca5e79d39e77debf0b564f6d77d37",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.34.0.tar.xz"
-         }
-      },
-      "5.12.3" : {
-         "gz" : {
-            "minor" : "12",
-            "md5" : "29975a69dce54e47fcd6331c085c6c99",
-            "point" : "3",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.12.3.tar.gz",
-            "sha1" : "ecf51cc7c91ef000671659934a719c8bd6a70138",
-            "sha256" : "5678bfd5c2cd59253a26171bf3e681235433b00c730eea8a8046e1b225c11d2f"
-         }
-      },
-      "5.38.3" : {
-         "gz" : {
-            "sha256" : "8a8033859dd1d75eb0c9158eedd7384df1af6b46a2a4e85073b07e6cc7c5b873",
-            "sha1" : "c995fbc1ece05f3d0e2d7ebbe7d0896baea6f860",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.38.3.tar.gz",
-            "point" : "3",
-            "md5" : "d53b1d50db50825305b01c3f8699023d",
-            "minor" : "38"
-         },
-         "xz" : {
-            "minor" : "38",
-            "md5" : "c333078519edb63ae3ddffc6f27a8be9",
-            "point" : "3",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.38.3.tar.xz",
-            "sha1" : "382bf91ebc427c3d901fbde126cb7d4f620ea104",
-            "sha256" : "da4c8ae1e91d60a52e02e0009618fc6aa62e1ac90b3f302969e2cf490c122dcc"
-         }
-      },
-      "5.20.2" : {
-         "gz" : {
-            "url" : "https://www.cpan.org/src/5.0/perl-5.20.2.tar.gz",
-            "sha1" : "07263da0703d97733a4d51bf77192039462d4a5a",
-            "sha256" : "b1a43992a717d506095856d370550caa11dba8132a4fdaa186a1ae7e1fbd9b9d",
-            "point" : "2",
-            "md5" : "81b17b9a4e5ee18e54efe906c9bf544d",
-            "minor" : "20"
-         }
-      },
-      "5.18.2" : {
-         "gz" : {
-            "sha256" : "7cbed5ef11900e8f68041215eea0de5e443d53393f84c41d5c9c69c150a4982f",
-            "sha1" : "7f0cc08d883a0e0aaaa385903ec4fb28aec514ec",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.18.2.tar.gz",
-            "point" : "2",
-            "md5" : "373f57ccc441dbc1812435f45ad20660",
-            "minor" : "18"
-         }
-      },
-      "5.16.0" : {
-         "gz" : {
-            "sha256" : "3a33eb21f61acdca2ea70394ba8abdf7d5abbcb6a7d81ad2f572e72bd7b36504",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.16.0.tar.gz",
-            "sha1" : "d21de2b409d99440047a4e67a61f0a781ea2f66b",
-            "point" : "0",
-            "minor" : "16",
-            "md5" : "9847f7633da2e4cea016ba6c4020ec4c"
-         }
-      },
-      "5.26.1" : {
-         "gz" : {
-            "sha256" : "e763aa485e8dc1a70483dbe6d615986bbf32b977f38016480d68c99237e701dd",
-            "sha1" : "74a0822429508d593513a0dfd6f51a907bad68d0",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.26.1.tar.gz",
-            "minor" : "26",
-            "md5" : "a7e5c531ee1719c53ec086656582ea86",
-            "point" : "1"
-         },
-         "xz" : {
-            "point" : "1",
-            "minor" : "26",
-            "md5" : "70e988b4318739b0cf3ad5e120bfde88",
-            "sha256" : "fe8208133e73e47afc3251c08d2c21c5a60160165a8ab8b669c43a420e4ec680",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.26.1.tar.xz",
-            "sha1" : "403bb1804cb41416153d908eea093f2be22a77f6"
-         }
-      },
-      "5.8.0" : {
-         "gz" : {
-            "md5" : "d9bdb180620306023fd35901a2878b62",
-            "minor" : "8",
-            "point" : "0",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.8.0.tar.gz",
-            "sha1" : "be1e05876ca734464f8a770d61b1f15cca555719",
-            "sha256" : "818964dacbbe1269f8eac0b5e88b47430724676c9517967701f82b9bbb75d9ca"
-         }
-      },
-      "5.12.1" : {
-         "gz" : {
-            "sha1" : "83b99f08379782dc06594a85eeb279edc5b0ca44",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.12.1.tar.gz",
-            "sha256" : "1320a5d854fd7d1870ffa9d16020d9b72acc9eb128014194a1d1667f5967aee0",
-            "md5" : "a57b6c82e9319145db72936b5e2fcbc7",
-            "minor" : "12",
-            "point" : "1"
-         }
-      },
-      "5.22.0" : {
-         "xz" : {
-            "point" : "0",
-            "md5" : "ff0f09b17de426eff323426cb140ee79",
-            "minor" : "22",
-            "sha256" : "be83ead0c5c26cbbe626fa4bac1a4beabe23a9eebc15d35ba49ccde11878e196",
-            "sha1" : "f40ad10d0b0e798efafebd9dc5d6509df2af3f1e",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.22.0.tar.xz"
-         },
-         "gz" : {
-            "minor" : "22",
-            "md5" : "e32cb6a8dda0084f2a43dac76318d68d",
-            "point" : "0",
-            "sha256" : "0c690807f5426bbd1db038e833a917ff00b988bf03cbf2447fa9ffdb34a2ab3c",
-            "sha1" : "e4c9e40d18efa7368e77343e0fd3339ca87e34f8",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.22.0.tar.gz"
-         }
-      },
-      "5.8.7" : {
-         "gz" : {
-            "sha1" : "a7390eda0b8c7127ff35a34fd42d5be9c1f08db1",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.8.7.tar.gz",
-            "sha256" : "916d7e1393ed09ca4c61b3c1ecb5f5564266c955db81ff587d2da8af7a7abaab",
-            "md5" : "dacefa1fe3c5b6d7bbc334ad94826131",
-            "minor" : "8",
-            "point" : "7"
-         }
-      },
-      "5.30.0" : {
-         "xz" : {
-            "point" : "0",
-            "md5" : "037c35000550bdcb47552ad0f6d3064d",
-            "minor" : "30",
-            "sha256" : "ac501cad4af904d33370a9ea39dbb7a8ad4cb19bc7bc8a9c17d8dc3e81ef6306",
-            "sha1" : "cc8d1e08ffe4624c197a44d02855632725d39f8e",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.30.0.tar.xz"
-         },
-         "gz" : {
-            "sha256" : "851213c754d98ccff042caa40ba7a796b2cee88c5325f121be5cbb61bbf975f2",
-            "sha1" : "aa5620fb5a4ca125257ae3f8a7e5d05269388856",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.30.0.tar.gz",
-            "md5" : "9770584cdf9b5631c38097645ce33549",
-            "minor" : "30",
-            "point" : "0"
-         }
-      },
-      "5.14.4" : {
-         "gz" : {
-            "sha256" : "803fd44c492fcef79fda456a6f50455766e00ddec2e568a543630f65ff3f44cb",
-            "sha1" : "2fdbbf39b3bbd79e42a7cf42fc05bf9891f077a1",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.14.4.tar.gz",
-            "minor" : "14",
-            "md5" : "d2648c500f3169ab754bbfb30731fbe4",
-            "point" : "4"
-         }
-      },
-      "5.38.1" : {
-         "xz" : {
-            "md5" : "12a6bc9537d94f1a432ac4fa3cf536bd",
-            "minor" : "38",
-            "point" : "1",
-            "sha256" : "6a82c7930563086e78cb84d9c265e6b212ee65d509d19eedcd23ab8c1ba3f046",
-            "sha1" : "e6e80a64eda14d1819e7f79c60a9e5a6e320bb55",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.38.1.tar.xz"
-         },
-         "gz" : {
-            "sha1" : "bf9343d42f8cbe0313eedfc8b5ca02432241ed6b",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.38.1.tar.gz",
-            "sha256" : "e9b02f3f37f73f38e456ef76d7daded16141cfd91dd4aa271c5f9e6332eade98",
-            "point" : "1",
-            "minor" : "38",
-            "md5" : "9c0d365e54260b7669a436016e7218b2"
-         }
-      },
-      "5.20.3" : {
-         "gz" : {
-            "md5" : "d647d0ea5a7a8194c34759ab9f2610cd",
-            "minor" : "20",
-            "point" : "3",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.20.3.tar.gz",
-            "sha1" : "1091d56b81c1060601d5228fd42ad5cf10546622",
-            "sha256" : "3524e3a76b71650ab2f794fd68e45c366ec375786d2ad2dca767da424bbb9b4a"
-         }
-      },
-      "5.18.3" : {
-         "gz" : {
-            "md5" : "16c1ddb143af7899d21e8dbe56946e77",
-            "minor" : "18",
-            "point" : "3",
-            "sha256" : "87acb398b571623a40d467357c74a3e53f3d16222d0a2b40b627aea5e04f7b46",
-            "sha1" : "d47e3589a03dc8d7dbc11444f0dd554cbc6a9e82",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.18.3.tar.gz"
-         }
-      },
-      "5.8.6" : {
-         "gz" : {
-            "url" : "https://www.cpan.org/src/5.0/perl-5.8.6.tar.gz",
-            "sha1" : "6ca979c94f4f59dd417d99c9a5196522540a7c0e",
-            "sha256" : "f6da39751b74033df4a132c4dde0e58705af4907f06ea46a279e1f376d5e4683",
-            "md5" : "8d4aa4e061fd5bc0c39e4f0a63267880",
-            "minor" : "8",
-            "point" : "6"
-         }
-      },
-      "5.22.4" : {
-         "gz" : {
-            "url" : "https://www.cpan.org/src/5.0/perl-5.22.4.tar.gz",
-            "sha1" : "fd79af20e6454d1bb5e5e6ac4774a1e295d4d794",
-            "sha256" : "ba9ef57c2b709f2dad9c5f6acf3111d9dfac309c484801e0152edbca89ed61fa",
-            "minor" : "22",
-            "md5" : "31a71821682e02378fcdadeed85688b8",
-            "point" : "4"
-         },
-         "xz" : {
-            "sha256" : "713243dce27d7aa0bdbf52b2070de5ce449f9ffbcc14a93efbc6f2beff0f5ce8",
-            "sha1" : "53d85affaeb84ed859c2710c3e4330314b5115b5",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.22.4.tar.xz",
-            "point" : "4",
-            "md5" : "0831879e8a6e18adeb922fb01b1beb32",
-            "minor" : "22"
-         }
-      },
-      "5.14.0" : {
-         "gz" : {
-            "sha256" : "fb0ed8aeca9e8903fb442a2dd51f27407ec1b9ee7aa1015ece15a90d5410123e",
-            "sha1" : "7e2aab2101b087f6f2b9405b626a3f064c23693d",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.14.0.tar.gz",
-            "minor" : "14",
-            "md5" : "e688b0ddad50bca9a6223693a85c439d",
-            "point" : "0"
-         }
-      },
-      "5.24.1" : {
-         "xz" : {
-            "point" : "1",
-            "md5" : "af6a84c7c3e2b8b269c105a5db2f6d53",
-            "minor" : "24",
-            "sha1" : "5bec25d8821b81a5939ee220997f4c8ab1c13e31",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.24.1.tar.xz",
-            "sha256" : "03a77bac4505c270f1890ece75afc7d4b555090b41aa41ea478747e23b2afb3f"
-         },
-         "gz" : {
-            "point" : "1",
-            "md5" : "765ef511b5b87a164e2531403ee16b3c",
-            "minor" : "24",
-            "sha256" : "e6c185c9b09bdb3f1b13f678999050c639859a7ef39c8cad418448075f5918af",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.24.1.tar.gz",
-            "sha1" : "19b218bbc3a63a8408ed56b93928fd9a4c1b5c83"
-         }
-      },
-      "5.8.8" : {
-         "gz" : {
-            "sha256" : "e15d499321e003d12ed183601e37ee7ba5f64b278d1de30149ce01bd4a3f234d",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.8.8.tar.gz",
-            "sha1" : "acaa16580bedbea8636e2e8abb24cb285d6f5c55",
-            "point" : "8",
-            "md5" : "b8c118d4360846829beb30b02a6b91a7",
-            "minor" : "8"
-         }
-      },
-      "5.28.2" : {
-         "xz" : {
-            "sha256" : "0b0189bfa4b2da20e899b4bdd746ac402e8f746a58e4fcf5516484157f2aab07",
-            "sha1" : "e7be78eca9ac5596783e6abcf957408050a7b650",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.28.2.tar.xz",
-            "point" : "2",
-            "md5" : "6bb75770e9ba085b32bf13e4be71e4ac",
-            "minor" : "28"
-         },
-         "gz" : {
-            "sha256" : "aa95456dddb3eb1cc5475fed4e08f91876bea71fb636fba6399054dfbabed6c7",
-            "sha1" : "5457f788372f667bf5a1ba3b05211faf773f024f",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.28.2.tar.gz",
-            "minor" : "28",
-            "md5" : "1323e7581fbedf3791d2843f4ccaec4b",
+            "md5" : "6aa648d086ecda5400de3472dbe1ebfe",
+            "sha256" : "a5e66f6ebf701b0567f569f57cae82abf5ce57af70a2b45ae71323b61f49134e",
             "point" : "2"
          }
       },
-      "5.16.1" : {
+      "5.32.1" : {
+         "xz" : {
+            "point" : "1",
+            "sha256" : "57cc47c735c8300a8ce2fa0643507b44c4ae59012bfdad0121313db639e02309",
+            "minor" : "32",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.32.1.tar.xz",
+            "sha1" : "1fb4f710d139da1e1a3e1fa4eaba201fcaa8e18e",
+            "md5" : "7f104064b906ad8c7329ca5e409a32d7"
+         },
          "gz" : {
             "point" : "1",
-            "md5" : "bcc5136007177b0fe2b6fd739fb66b84",
-            "minor" : "16",
-            "sha1" : "60f2b81e3ffaff3030962ccbc02cd04f91f69ad5",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.16.1.tar.gz",
-            "sha256" : "759a2479587024fa64685e04dbfb4ef07461aef3aff932a34d0c1435d4fa1d97"
-         }
-      },
-      "5.26.0" : {
-         "gz" : {
-            "sha1" : "e1abc572ef5bb69ebfa0f79a60a7eae753cc7b29",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.26.0.tar.gz",
-            "sha256" : "ebe7c66906d4fb55449380ab1b7e004eeef52c38d3443fa301f8e17a1a4cb67f",
-            "point" : "0",
-            "minor" : "26",
-            "md5" : "89068bd18070425e8cbcef2869f78edf"
-         },
-         "xz" : {
-            "point" : "0",
-            "md5" : "8c6995718e4cb62188f0d5e3488cd91f",
-            "minor" : "26",
-            "sha1" : "50f14ebdaa509ff5ef9b32ad388a1e6237c882dd",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.26.0.tar.xz",
-            "sha256" : "9bf2e3d0d72aad77865c3bdbc20d3b576d769c5c255c4ceb30fdb9335266bf55"
+            "sha256" : "03b693901cd8ae807231b1787798cf1f2e0b8a56218d07b7da44f784a7caeb2c",
+            "md5" : "40dff18daf18178c7fc4579451be38ef",
+            "sha1" : "e16a6db69d2071232f442f4052b1ddefb3bac6f9",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.32.1.tar.gz",
+            "minor" : "32"
          }
       },
       "5.36.3" : {
          "xz" : {
-            "url" : "https://www.cpan.org/src/5.0/perl-5.36.3.tar.xz",
-            "sha1" : "9949e79c92171b39f4fb2b19ffd4ea293b8dd589",
             "sha256" : "45a228daef66d02fdccc820e71f87e40d8e3df1fc4431f8d4580ec08033866bd",
-            "minor" : "36",
+            "point" : "3",
+            "sha1" : "9949e79c92171b39f4fb2b19ffd4ea293b8dd589",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.36.3.tar.xz",
             "md5" : "17946060e6279cf32d08edc92c40efc3",
-            "point" : "3"
+            "minor" : "36"
          },
          "gz" : {
-            "url" : "https://www.cpan.org/src/5.0/perl-5.36.3.tar.gz",
-            "sha1" : "cabfe63626bd2a4f68a2fda3ffb9a4926caeeb92",
-            "sha256" : "f2a1ad88116391a176262dd42dfc52ef22afb40f4c0e9810f15d561e6f1c726a",
             "md5" : "bc24785142057ab4b99b77f6ae4fdfcf",
+            "sha1" : "cabfe63626bd2a4f68a2fda3ffb9a4926caeeb92",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.36.3.tar.gz",
             "minor" : "36",
+            "point" : "3",
+            "sha256" : "f2a1ad88116391a176262dd42dfc52ef22afb40f4c0e9810f15d561e6f1c726a"
+         }
+      },
+      "5.30.3" : {
+         "gz" : {
+            "sha256" : "32e04c8bb7b1aecb2742a7f7ac0eabac100f38247352a73ad7fa104e39e7406f",
+            "point" : "3",
+            "minor" : "30",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.30.3.tar.gz",
+            "sha1" : "a2ea64db5c3b0908dc73b929638564371b83220e",
+            "md5" : "8bd8bdf9d495777e140af1a5810fee6a"
+         },
+         "xz" : {
+            "minor" : "30",
+            "md5" : "0af2ab0f01ec13e37cc13a27de930936",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.30.3.tar.xz",
+            "sha1" : "1003c6aa71d8966501038178459a9fa4e9aba747",
+            "sha256" : "6967595f2e3f3a94544c35152f9a25e0cb8ea24ae45f4bf1882f2e33f4a400f4",
             "point" : "3"
          }
       },
-      "5.34.2" : {
-         "xz" : {
-            "md5" : "86cd759446f8905bdec4b17259ed6e65",
+      "5.34.1" : {
+         "gz" : {
+            "md5" : "f7b970afd900ece13be9340749bb3326",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.34.1.tar.gz",
+            "sha1" : "b4594fff7a07ec61f0fa4fe8c89c3d36184dfd27",
             "minor" : "34",
-            "point" : "2",
-            "sha256" : "5e2cb14f0af985b1739a55b8f16d2cab9c7a913311bfb4892d1b3bf1034f341c",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.34.2.tar.xz",
-            "sha1" : "66a3c65f0282a0120116c6688366965449836d12"
+            "point" : "1",
+            "sha256" : "357951a491b0ba1ce3611263922feec78ccd581dddc24a446b033e25acf242a1"
          },
-         "gz" : {
-            "sha256" : "bd4eb97119f9c7ed1510c4b9b4ff218099135b2297b7c15d0f1b178d38c90fa4",
-            "sha1" : "b175e6fd19f4efe55457c02e11de57911a4151a6",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.34.2.tar.gz",
-            "point" : "2",
-            "md5" : "7d045dfd67aebe42a083736e44999281",
-            "minor" : "34"
-         }
-      },
-      "5.8.2" : {
-         "gz" : {
-            "md5" : "fa356b74f99166b63a68a322c3c68f91",
-            "minor" : "8",
-            "point" : "2",
-            "sha1" : "fafae27342e1730bad9d62cef28e2a42ff07841a",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.8.2.tar.gz",
-            "sha256" : "1c41b2bdc59596b7722ef48144018bb07124c586d16f642c23848a98b003ea82"
-         }
-      },
-      "5.28.3" : {
          "xz" : {
-            "sha256" : "77dc1ddf541643af14d585867d3d0741cce45d0dbe8f1467024e63165d9e2fc5",
-            "sha1" : "3bee8e910b6f00faf5ca2ab4ec959590c8840d5e",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.28.3.tar.xz",
-            "md5" : "efc03372d3cbeb14d49e30454d1d7cf3",
-            "minor" : "28",
-            "point" : "3"
+            "minor" : "34",
+            "md5" : "7d2ece7f50775ea1ff739831935a24bd",
+            "sha1" : "e7dbef3c1ea7caa73e2c705bba9e4bfb92ea98f0",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.34.1.tar.xz",
+            "sha256" : "6d52cf833ff1af27bb5e986870a2c30cec73c044b41e3458cd991f94374039f7",
+            "point" : "1"
+         }
+      },
+      "5.38.1" : {
+         "gz" : {
+            "md5" : "9c0d365e54260b7669a436016e7218b2",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.38.1.tar.gz",
+            "sha1" : "bf9343d42f8cbe0313eedfc8b5ca02432241ed6b",
+            "minor" : "38",
+            "point" : "1",
+            "sha256" : "e9b02f3f37f73f38e456ef76d7daded16141cfd91dd4aa271c5f9e6332eade98"
+         },
+         "xz" : {
+            "sha256" : "6a82c7930563086e78cb84d9c265e6b212ee65d509d19eedcd23ab8c1ba3f046",
+            "point" : "1",
+            "sha1" : "e6e80a64eda14d1819e7f79c60a9e5a6e320bb55",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.38.1.tar.xz",
+            "md5" : "12a6bc9537d94f1a432ac4fa3cf536bd",
+            "minor" : "38"
+         }
+      },
+      "5.40.0" : {
+         "xz" : {
+            "md5" : "cfe14ef0709b9687f9c514042e8e1e82",
+            "sha1" : "4a3af1f62afc611aa1552adc6c7ec389e9723bce",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.40.0.tar.xz",
+            "minor" : "40",
+            "sha256" : "d5325300ad267624cb0b7d512cfdfcd74fa7fe00c455c5b51a6bd53e5e199ef9",
+            "point" : "0"
          },
          "gz" : {
-            "sha1" : "2bbbc0db1b8f55ac6c3468ad883688971f7871ab",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.28.3.tar.gz",
-            "sha256" : "afc9c1d661597ae14d9e883c5071092bed73f60c3109b294823ea01aca705114",
-            "md5" : "18c2c82afb0508e7cee74d6f92f04966",
-            "minor" : "28",
-            "point" : "3"
+            "minor" : "40",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.40.0.tar.gz",
+            "sha1" : "30ad3d773a08af141a8062812d036c20377d3eac",
+            "md5" : "8da78b1f54b99e97954066d0aaad88bc",
+            "point" : "0",
+            "sha256" : "c740348f357396327a9795d3e8323bafd0fe8a5c7835fc1cbaba0cc8dfe7161f"
          }
       },
-      "5.6.1" : {
+      "5.8.1" : {
          "gz" : {
+            "sha256" : "90f5ef25b993cea2def2648d7bca9e351f2e417004cdc76fa02a9ec235ce4490",
             "point" : "1",
-            "md5" : "ec1ff15464809b562aecfaa2e65edba6",
-            "minor" : "6",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.6.1.tar.gz",
-            "sha1" : "c718b38685f90d51a9a6b1b008de0d7d198c0744",
-            "sha256" : "3291851138a94123cae4b11e3da100bd25038e0f02b8216110bf97b10a1bc65e"
+            "md5" : "87cf132f1fbf23e780f0b218046438a6",
+            "sha1" : "838a2f55927d14a9c8f239ebd8f40e33572f2800",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.8.1.tar.gz",
+            "minor" : "8"
          }
       },
-      "5.14.1" : {
+      "5.16.0" : {
          "gz" : {
-            "url" : "https://www.cpan.org/src/5.0/perl-5.14.1.tar.gz",
-            "sha1" : "bd24b7572330c4f87a47ea841f88deb925245a8b",
-            "sha256" : "169e0458772c0a998118ae7bd253c23d19135387b746dcfa3e15319dc137543e",
-            "point" : "1",
-            "minor" : "14",
-            "md5" : "0b74cffa3a10aee08442f950aecbaeec"
+            "md5" : "9847f7633da2e4cea016ba6c4020ec4c",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.16.0.tar.gz",
+            "sha1" : "d21de2b409d99440047a4e67a61f0a781ea2f66b",
+            "minor" : "16",
+            "sha256" : "3a33eb21f61acdca2ea70394ba8abdf7d5abbcb6a7d81ad2f572e72bd7b36504",
+            "point" : "0"
          }
       },
       "5.24.0" : {
          "xz" : {
             "sha256" : "a9a37c0860380ecd7b23aa06d61c20fc5bc6d95198029f3684c44a9d7e2952f2",
+            "point" : "0",
+            "md5" : "59456ae4bd4b06cb6e57cb19a3b2d349",
             "sha1" : "9d5424ac2debe979d1f7255fe0c818aff0b41b4c",
             "url" : "https://www.cpan.org/src/5.0/perl-5.24.0.tar.xz",
-            "md5" : "59456ae4bd4b06cb6e57cb19a3b2d349",
-            "minor" : "24",
-            "point" : "0"
+            "minor" : "24"
          },
          "gz" : {
-            "minor" : "24",
-            "md5" : "c5bf7f3285439a2d3b6a488e14503701",
             "point" : "0",
             "sha256" : "7e430c6e0e0d9017c3f72898850dea657fa6b51909220a7bcf305a87f2475202",
-            "sha1" : "35770ea5cf49a1082852c2300ccc3cbbc58b70fd",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.24.0.tar.gz"
-         }
-      },
-      "5.12.4" : {
-         "gz" : {
-            "md5" : "fd22aba88e4e27ab879f142eec6452a0",
-            "minor" : "12",
-            "point" : "4",
-            "sha1" : "b64a5d1fefe6db9c4144b4adba2c360afa9c29ea",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.12.4.tar.gz",
-            "sha256" : "c2a35aa538fb22ec1423fc2bdea79686bae22e119a56b189e70a6ca2d9d4b5dd"
-         }
-      },
-      "5.34.3" : {
-         "gz" : {
-            "url" : "https://www.cpan.org/src/5.0/perl-5.34.3.tar.gz",
-            "sha1" : "cd8084d884e27d25acd4b90ba3103b5a54ec3d96",
-            "sha256" : "5b12f62863332b2a5f54102af9cdf8c010877e4bf3294911edbd594b2a1e8ede",
-            "point" : "3",
-            "md5" : "02d149ac43ac65f72e850cda31bcde9d",
-            "minor" : "34"
-         },
-         "xz" : {
-            "point" : "3",
-            "md5" : "6280e464fa07fa0eb1377a9424c1c3a5",
-            "minor" : "34",
-            "sha256" : "0b15c830a9a295c9f9439b6cda389300f0b18092686eaef47fbc9c92f5930ee1",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.34.3.tar.xz",
-            "sha1" : "947ee746fae365de7522d1742a354b70dfa12123"
-         }
-      },
-      "5.36.2" : {
-         "gz" : {
-            "sha256" : "059d601f6bb637f31e0e39e0930b3a4db097991dd8cc2254301216befb445164",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.36.2.tar.gz",
-            "sha1" : "92d782b6086e3677cf8c8b557027b1fd27052856",
-            "point" : "2",
-            "md5" : "ffcd0efc3ff0f2788609ce74f7d3d6e5",
-            "minor" : "36"
-         },
-         "xz" : {
-            "sha256" : "19445f09ea9f6ada33297010d5b76ac46be565568d1a4377a6bc736cd795a128",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.36.2.tar.xz",
-            "sha1" : "9bd6e3f7c333e2e5f14c8650333fc29da3df2d90",
-            "md5" : "698ae4946b28e38a729916f04cc389a3",
-            "minor" : "36",
-            "point" : "2"
-         }
-      },
-      "5.30.1" : {
-         "xz" : {
-            "point" : "1",
-            "minor" : "30",
-            "md5" : "f399f3aaee90ddcff5eadd3bccdaacc0",
-            "sha256" : "7336cd3ed0535eb61b76a71350effcfa7c88b44faf37d64d70952ced5d38cd35",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.30.1.tar.xz",
-            "sha1" : "4bc190b6ac368f573e6a028f91430f831d40d30a"
-         },
-         "gz" : {
-            "point" : "1",
-            "md5" : "6438eb7b8db9bbde28e01086de376a46",
-            "minor" : "30",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.30.1.tar.gz",
-            "sha1" : "905617fbc5802d59914be2a26a604dee52dd13b3",
-            "sha256" : "bf3d25571ff1ee94186177c2cdef87867fd6a14aa5a84f0b1fb7bf798f42f964"
-         }
-      },
-      "5.38.0" : {
-         "gz" : {
-            "point" : "0",
-            "md5" : "06934f18763474c1e3c9312c158f5d0e",
-            "minor" : "38",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.38.0.tar.gz",
-            "sha1" : "5c4dea06509959fedcccaada8d129518487399b7",
-            "sha256" : "213ef58089d2f2c972ea353517dc60ec3656f050dcc027666e118b508423e517"
-         },
-         "xz" : {
-            "url" : "https://www.cpan.org/src/5.0/perl-5.38.0.tar.xz",
-            "sha1" : "2e7b1c56c1f795e8173c83a52e91218ba05ee72c",
-            "sha256" : "eca551caec3bc549a4e590c0015003790bdd1a604ffe19cc78ee631d51f7072e",
-            "point" : "0",
-            "md5" : "e1c8aaec897dd386c741f97eef9f2e87",
-            "minor" : "38"
-         }
-      },
-      "5.24.4" : {
-         "gz" : {
-            "md5" : "0cf94185b622d37a820edfc87e89c642",
             "minor" : "24",
-            "point" : "4",
-            "sha256" : "bf2f3dddb10154d833cdb415a93f1672b6d8599e87913b66c085c332cb361970",
-            "sha1" : "85e57c3c13d5f4243e3ced98c85e0c007c7936c9",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.24.4.tar.gz"
-         },
-         "xz" : {
-            "sha256" : "7f080287ff64750270689843ae945f02159a33cb8f2fc910248c15befba5db84",
-            "sha1" : "f5b1301556eb2a447e51274dea48840b295f7ff7",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.24.4.tar.xz",
-            "point" : "4",
-            "md5" : "04622bc4d3941dc7eb571c52b7c02993",
-            "minor" : "24"
+            "sha1" : "35770ea5cf49a1082852c2300ccc3cbbc58b70fd",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.24.0.tar.gz",
+            "md5" : "c5bf7f3285439a2d3b6a488e14503701"
          }
       },
-      "5.12.0" : {
+      "5.12.2" : {
          "gz" : {
-            "point" : "0",
             "minor" : "12",
-            "md5" : "7db7c4b9d6f2e095eaebd9e22d81acc1",
-            "sha1" : "5341e60d099fdda71bc33b2a36e417fc0926518f",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.12.0.tar.gz",
-            "sha256" : "ba9d6188efd0b892a430edf0099878eb7958ba886708d1ec97467cb24c4d1451"
-         }
-      },
-      "5.22.1" : {
-         "xz" : {
-            "minor" : "22",
-            "md5" : "6671e4829cbaf9cecafa9a84f141b0a3",
-            "point" : "1",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.22.1.tar.xz",
-            "sha1" : "8cb3b099f7c74d4f541a9318c108906daef942c1",
-            "sha256" : "9e87317d693ce828095204be0d09af8d60b8785533fadea1a82b6f0e071e5c79"
-         },
-         "gz" : {
-            "url" : "https://www.cpan.org/src/5.0/perl-5.22.1.tar.gz",
-            "sha1" : "105fe2515cb6e7d22e583336f93823d7407b9359",
-            "sha256" : "2b475d0849d54c4250e9cba4241b7b7291cffb45dfd083b677ca7b5d38118f27",
-            "md5" : "19295bbb775a3c36123161b9bf4892f1",
-            "minor" : "22",
-            "point" : "1"
-         }
-      },
-      "5.36.1" : {
-         "xz" : {
-            "point" : "1",
-            "md5" : "825f6b1d7e03b22522e0bdb992fbb728",
-            "minor" : "36",
-            "sha256" : "bd91217ea8a8c8b81f21ebbb6cefdf0d13ae532013f944cdece2cd51aef4b6a7",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.36.1.tar.xz",
-            "sha1" : "7b766266af08a6cef0487308e80b40d5d8069df7"
-         },
-         "gz" : {
-            "point" : "1",
-            "md5" : "ecea76f0433c18e73508ac53eb4a7c5d",
-            "minor" : "36",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.36.1.tar.gz",
-            "sha1" : "754f3c9201c25d04f9cb0bd929a6fc36dcc74baf",
-            "sha256" : "68203665d8ece02988fc77dc92fccbb297a83a4bb4b8d07558442f978da54cc1"
-         }
-      },
-      "5.22.2" : {
-         "gz" : {
-            "url" : "https://www.cpan.org/src/5.0/perl-5.22.2.tar.gz",
-            "sha1" : "2b84a711694be9a10e558c38c9aa43d86c7329a9",
-            "sha256" : "81ad196385aa168cb8bd785031850e808c583ed18a7901d33e02d4f70ada83c2",
-            "md5" : "5767e2a10dd62a46d7b57f74a90d952b",
-            "minor" : "22",
-            "point" : "2"
-         },
-         "xz" : {
-            "url" : "https://www.cpan.org/src/5.0/perl-5.22.2.tar.xz",
-            "sha1" : "43b599def873413012fc8bcfd0a64bbce40b4ed2",
-            "sha256" : "b34dab1eabec056bec5a6682a57b55dab1bcf6afc60b098c9e2d99433dedc295",
-            "minor" : "22",
-            "md5" : "5a9da684064cfe321dbc85eef75eecca",
+            "md5" : "af2df531d46b77fdf0d97eecb03eddb2",
+            "sha1" : "c157f214a93ce20fc06dc9d9c902c05ad1327cb1",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.12.2.tar.gz",
+            "sha256" : "cf888340021d5a2d1238bbd9b8b55aaf420a848d46e4d317cb8567f86ceb1022",
             "point" : "2"
          }
       },
-      "5.12.5" : {
-         "gz" : {
-            "sha256" : "1db3d7cf39ac0379233211dd41afad300c11b33e3219e1d76908d01172f84a5c",
-            "sha1" : "68f0bdc06284053c206fdf2441a123fafdde38de",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.12.5.tar.gz",
-            "minor" : "12",
-            "md5" : "3a647533aaa060a79aa0b9fa17198576",
-            "point" : "5"
-         }
-      },
-      "5.30.2" : {
-         "xz" : {
-            "point" : "2",
-            "md5" : "4bfa12b528522a50de0470b8b70b9b3b",
-            "minor" : "30",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.30.2.tar.xz",
-            "sha1" : "d82cdaa610a3e749e821fc77004b1b4bfd5ebd28",
-            "sha256" : "a1aa88bd6fbbdc2e82938afbb76c408b0ea847317737b712dc196cc7907a5259"
-         },
+      "5.20.2" : {
          "gz" : {
             "point" : "2",
-            "minor" : "30",
-            "md5" : "1fffdce56f2b307608e3c7497f66daad",
-            "sha1" : "e02a31cc8f536b4927d8e018d265cddb790bb4e2",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.30.2.tar.gz",
-            "sha256" : "66db7df8a91979eb576fac91743644da878244cf8ee152f02cd6f5cd7a731689"
+            "sha256" : "b1a43992a717d506095856d370550caa11dba8132a4fdaa186a1ae7e1fbd9b9d",
+            "md5" : "81b17b9a4e5ee18e54efe906c9bf544d",
+            "sha1" : "07263da0703d97733a4d51bf77192039462d4a5a",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.20.2.tar.gz",
+            "minor" : "20"
          }
       },
-      "5.6.0" : {
+      "5.6.1" : {
          "gz" : {
-            "sha256" : "aec3af25bc07f288e8fda30812c3d2acbe13e52fcf421eb552d1f3d63a413078",
-            "sha1" : "a2e9da9c82116a9094cc0f92c248c4339fda89fa",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.6.0.tar.gz",
-            "point" : "0",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.6.1.tar.gz",
+            "sha1" : "c718b38685f90d51a9a6b1b008de0d7d198c0744",
+            "md5" : "ec1ff15464809b562aecfaa2e65edba6",
             "minor" : "6",
-            "md5" : "b2940e2cc6312bcfa52355b684e70b9d"
-         }
-      },
-      "5.40.0" : {
-         "gz" : {
-            "minor" : "40",
-            "md5" : "8da78b1f54b99e97954066d0aaad88bc",
-            "point" : "0",
-            "sha256" : "c740348f357396327a9795d3e8323bafd0fe8a5c7835fc1cbaba0cc8dfe7161f",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.40.0.tar.gz",
-            "sha1" : "30ad3d773a08af141a8062812d036c20377d3eac"
-         },
-         "xz" : {
-            "point" : "0",
-            "md5" : "cfe14ef0709b9687f9c514042e8e1e82",
-            "minor" : "40",
-            "sha256" : "d5325300ad267624cb0b7d512cfdfcd74fa7fe00c455c5b51a6bd53e5e199ef9",
-            "sha1" : "4a3af1f62afc611aa1552adc6c7ec389e9723bce",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.40.0.tar.xz"
+            "point" : "1",
+            "sha256" : "3291851138a94123cae4b11e3da100bd25038e0f02b8216110bf97b10a1bc65e"
          }
       },
       "5.14.2" : {
          "gz" : {
-            "sha256" : "6488359573bd7d41761bf935f66f827dc220fb3df961ef9b775d51fbd66548d3",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.14.2.tar.gz",
-            "sha1" : "df1549d65cdef2b20023af83ecaa2a024109a5ad",
             "minor" : "14",
             "md5" : "3306fbaf976dcebdcd49b2ac0be00eb9",
+            "sha1" : "df1549d65cdef2b20023af83ecaa2a024109a5ad",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.14.2.tar.gz",
+            "sha256" : "6488359573bd7d41761bf935f66f827dc220fb3df961ef9b775d51fbd66548d3",
             "point" : "2"
          }
       },
-      "5.16.3" : {
+      "5.10.0" : {
          "gz" : {
-            "minor" : "16",
-            "md5" : "eb5c40f2575df6c155bc99e3fe0a9d82",
-            "point" : "3",
-            "sha256" : "69cf08dca0565cec2c5c6c2f24b87f986220462556376275e5431cc2204dedb6",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.16.3.tar.gz",
-            "sha1" : "83678adf56d3dc51f47a90444a891f4fe16868da"
+            "sha256" : "94464a0d374fa63226eee56e0bb3d35564f9d8391a1a8d9f0055805ec25f3b2e",
+            "point" : "0",
+            "md5" : "d2c39b002ebfd2c3c5dba589365c5a71",
+            "sha1" : "adf73606dd5248af7ccdd735bcaa0e628ea75b3c",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.10.0.tar.gz",
+            "minor" : "10"
          }
       },
-      "5.18.4" : {
-         "gz" : {
-            "md5" : "1f9334ff730adc05acd3dd7130d295db",
-            "minor" : "18",
-            "point" : "4",
-            "sha256" : "01a4e11a9a34616396c4a77b3cef51f76a297e1a2c2c490ae6138bf0351eb29f",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.18.4.tar.gz",
-            "sha1" : "3ae1af872d5bf89f35b1e8d69be9098028fb158d"
-         }
-      },
-      "5.34.1" : {
-         "gz" : {
-            "point" : "1",
-            "md5" : "f7b970afd900ece13be9340749bb3326",
-            "minor" : "34",
-            "sha256" : "357951a491b0ba1ce3611263922feec78ccd581dddc24a446b033e25acf242a1",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.34.1.tar.gz",
-            "sha1" : "b4594fff7a07ec61f0fa4fe8c89c3d36184dfd27"
-         },
+      "5.22.0" : {
          "xz" : {
-            "url" : "https://www.cpan.org/src/5.0/perl-5.34.1.tar.xz",
-            "sha1" : "e7dbef3c1ea7caa73e2c705bba9e4bfb92ea98f0",
-            "sha256" : "6d52cf833ff1af27bb5e986870a2c30cec73c044b41e3458cd991f94374039f7",
-            "md5" : "7d2ece7f50775ea1ff739831935a24bd",
-            "minor" : "34",
-            "point" : "1"
-         }
-      },
-      "5.30.3" : {
-         "xz" : {
-            "md5" : "0af2ab0f01ec13e37cc13a27de930936",
-            "minor" : "30",
-            "point" : "3",
-            "sha256" : "6967595f2e3f3a94544c35152f9a25e0cb8ea24ae45f4bf1882f2e33f4a400f4",
-            "sha1" : "1003c6aa71d8966501038178459a9fa4e9aba747",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.30.3.tar.xz"
-         },
-         "gz" : {
-            "url" : "https://www.cpan.org/src/5.0/perl-5.30.3.tar.gz",
-            "sha1" : "a2ea64db5c3b0908dc73b929638564371b83220e",
-            "sha256" : "32e04c8bb7b1aecb2742a7f7ac0eabac100f38247352a73ad7fa104e39e7406f",
-            "point" : "3",
-            "minor" : "30",
-            "md5" : "8bd8bdf9d495777e140af1a5810fee6a"
-         }
-      },
-      "5.22.3" : {
-         "gz" : {
-            "sha1" : "2966b89d7081ffefca06c9cfed0ee21ec621b61c",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.22.3.tar.gz",
-            "sha256" : "1b351fb4df7e62ec3c8b2a9f516103595b2601291f659fef1bbe3917e8410083",
-            "point" : "3",
-            "md5" : "aa4f236dc2fc6f88b871436b8d0fda95",
-            "minor" : "22"
-         },
-         "xz" : {
-            "point" : "3",
             "minor" : "22",
-            "md5" : "6cbd9bf004bcf27f696857b1572f6fd0",
-            "sha256" : "899d6512301f3dfa6240e98327205e017d08b539c90632228b53faab267e1d8f",
-            "sha1" : "4c9de6646d559c81116c7a047e7cccf609abbd27",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.22.3.tar.xz"
-         }
-      },
-      "5.32.0" : {
-         "xz" : {
-            "sha256" : "6f436b447cf56d22464f980fac1916e707a040e96d52172984c5d184c09b859b",
-            "sha1" : "0426c89d8ad5542def3e0065c299d449230aeb6c",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.32.0.tar.xz",
-            "md5" : "3812cd9a096a72cb27767c7e2e40441c",
-            "minor" : "32",
+            "sha1" : "f40ad10d0b0e798efafebd9dc5d6509df2af3f1e",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.22.0.tar.xz",
+            "md5" : "ff0f09b17de426eff323426cb140ee79",
+            "sha256" : "be83ead0c5c26cbbe626fa4bac1a4beabe23a9eebc15d35ba49ccde11878e196",
             "point" : "0"
          },
          "gz" : {
-            "sha1" : "ddecb3117c016418b19ed3a8827e4b521b47d6bb",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.32.0.tar.gz",
-            "sha256" : "efeb1ce1f10824190ad1cadbcccf6fdb8a5d37007d0100d2d9ae5f2b5900c0b4",
             "point" : "0",
-            "minor" : "32",
-            "md5" : "7e12c2ef8f3fbf5ca615eecae222c4e3"
+            "sha256" : "0c690807f5426bbd1db038e833a917ff00b988bf03cbf2447fa9ffdb34a2ab3c",
+            "minor" : "22",
+            "md5" : "e32cb6a8dda0084f2a43dac76318d68d",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.22.0.tar.gz",
+            "sha1" : "e4c9e40d18efa7368e77343e0fd3339ca87e34f8"
          }
       },
-      "5.20.0" : {
+      "5.26.2" : {
+         "xz" : {
+            "sha256" : "0f8c0fb1b0db4681adb75c3ba0dd77a0472b1b359b9e80efd79fc27b4352132c",
+            "point" : "2",
+            "minor" : "26",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.26.2.tar.xz",
+            "sha1" : "bfa5c7921ed7bf5e035dbf2f7ff81367b81e372c",
+            "md5" : "1fa1b53eeff76aa37b17bfc9b2771671"
+         },
+         "gz" : {
+            "sha256" : "572f9cea625d6062f8a63b5cee9d3ee840800a001d2bb201a41b9a177ab7f70d",
+            "point" : "2",
+            "minor" : "26",
+            "md5" : "dc0fea097f3992a8cd53f8ac0810d523",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.26.2.tar.gz",
+            "sha1" : "5dc74e667250a663d8f3114869e13ba2869bf6a9"
+         }
+      },
+      "5.28.0" : {
          "gz" : {
             "point" : "0",
-            "minor" : "20",
-            "md5" : "406ec049ebe3afcc80d9c76ec78ca4f8",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.20.0.tar.gz",
-            "sha1" : "52087047fd35e1020387f7c492f594a397be4e12",
-            "sha256" : "4e8c28ad6ecc89902f9cb2e76f2815bb1a8287ded278e15f7a36ca45f8bbcd02"
+            "sha256" : "7e929f64d4cb0e9d1159d4a59fc89394e27fa1f7004d0836ca0d514685406ea8",
+            "minor" : "28",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.28.0.tar.gz",
+            "sha1" : "0622f86160e8969633cbd21a2cca9e11ae1f8c5a",
+            "md5" : "c7c63781745e280e08401a306a83bfb8"
+         },
+         "xz" : {
+            "point" : "0",
+            "sha256" : "059b3cb69970d8c8c5964caced0335b4af34ac990c8e61f7e3f90cd1c2d11e49",
+            "sha1" : "c0e9e7a0dea97ec9816687d865fd461a99ef185c",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.28.0.tar.xz",
+            "md5" : "f3245183c0a08f65e94a3333995af08e",
+            "minor" : "28"
+         }
+      },
+      "5.8.2" : {
+         "gz" : {
+            "url" : "https://www.cpan.org/src/5.0/perl-5.8.2.tar.gz",
+            "sha1" : "fafae27342e1730bad9d62cef28e2a42ff07841a",
+            "md5" : "fa356b74f99166b63a68a322c3c68f91",
+            "minor" : "8",
+            "sha256" : "1c41b2bdc59596b7722ef48144018bb07124c586d16f642c23848a98b003ea82",
+            "point" : "2"
+         }
+      },
+      "5.8.5" : {
+         "gz" : {
+            "sha256" : "3dd1cba53ce6348ed5119b5f7d1ef6cd4d165f89e4ecc7c21adf7932e0df2709",
+            "point" : "5",
+            "md5" : "49baa8d7d29b4a9713c06edeb81e6b1b",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.8.5.tar.gz",
+            "sha1" : "e7f8e5fc1d89b2641206cc69e2cffd8b42eb2ebe",
+            "minor" : "8"
+         }
+      },
+      "5.18.2" : {
+         "gz" : {
+            "sha256" : "7cbed5ef11900e8f68041215eea0de5e443d53393f84c41d5c9c69c150a4982f",
+            "point" : "2",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.18.2.tar.gz",
+            "sha1" : "7f0cc08d883a0e0aaaa385903ec4fb28aec514ec",
+            "md5" : "373f57ccc441dbc1812435f45ad20660",
+            "minor" : "18"
+         }
+      },
+      "5.38.4" : {
+         "xz" : {
+            "sha256" : "f6777e856b22460e8091f9524593e93299f421cc23dbd408d3f5ed3328d357a7",
+            "point" : "4",
+            "minor" : "38",
+            "sha1" : "8c8ce040a533d15d1cf7fe221bf1897f7be10e75",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.38.4.tar.xz",
+            "md5" : "30726c812455987480c268d6a7d0d5aa"
+         },
+         "gz" : {
+            "sha1" : "910938c217104132621451b11fe208eb87d595ef",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.38.4.tar.gz",
+            "md5" : "ea7d5b63a63b95259d9e424adabe29a1",
+            "minor" : "38",
+            "point" : "4",
+            "sha256" : "fb888accf8b50b5180e91166e5153608be294c57c19878e95f7659c1f1f12758"
+         }
+      },
+      "5.8.8" : {
+         "gz" : {
+            "point" : "8",
+            "sha256" : "e15d499321e003d12ed183601e37ee7ba5f64b278d1de30149ce01bd4a3f234d",
+            "minor" : "8",
+            "md5" : "b8c118d4360846829beb30b02a6b91a7",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.8.8.tar.gz",
+            "sha1" : "acaa16580bedbea8636e2e8abb24cb285d6f5c55"
+         }
+      },
+      "5.28.2" : {
+         "gz" : {
+            "sha256" : "aa95456dddb3eb1cc5475fed4e08f91876bea71fb636fba6399054dfbabed6c7",
+            "point" : "2",
+            "md5" : "1323e7581fbedf3791d2843f4ccaec4b",
+            "sha1" : "5457f788372f667bf5a1ba3b05211faf773f024f",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.28.2.tar.gz",
+            "minor" : "28"
+         },
+         "xz" : {
+            "url" : "https://www.cpan.org/src/5.0/perl-5.28.2.tar.xz",
+            "sha1" : "e7be78eca9ac5596783e6abcf957408050a7b650",
+            "md5" : "6bb75770e9ba085b32bf13e4be71e4ac",
+            "minor" : "28",
+            "sha256" : "0b0189bfa4b2da20e899b4bdd746ac402e8f746a58e4fcf5516484157f2aab07",
+            "point" : "2"
          }
       },
       "5.18.0" : {
          "gz" : {
             "sha256" : "e56698de4ad3e3d54e8ed25d2e91ddffd6758c32b72a0de89c38a763e2f783b7",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.18.0.tar.gz",
-            "sha1" : "f5a97a9fa4e9d0ef9c4b313c5b778a0e76291ee2",
             "point" : "0",
+            "sha1" : "f5a97a9fa4e9d0ef9c4b313c5b778a0e76291ee2",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.18.0.tar.gz",
             "md5" : "197ce31e84936bc0a83b03b2ee714cff",
             "minor" : "18"
          }
       },
-      "5.10.1" : {
+      "5.12.5" : {
          "gz" : {
-            "md5" : "b9b2fdb957f50ada62d73f43ee75d044",
-            "minor" : "10",
-            "point" : "1",
-            "sha1" : "8536ed1c14444d1efea069525a816fbc7be7109f",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.10.1.tar.gz",
-            "sha256" : "cb7f26ea4b2b28d6644354d87a269d01cac1b635287dae64e88eeafa24b44f35"
+            "point" : "5",
+            "sha256" : "1db3d7cf39ac0379233211dd41afad300c11b33e3219e1d76908d01172f84a5c",
+            "md5" : "3a647533aaa060a79aa0b9fa17198576",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.12.5.tar.gz",
+            "sha1" : "68f0bdc06284053c206fdf2441a123fafdde38de",
+            "minor" : "12"
          }
       },
-      "5.28.1" : {
-         "xz" : {
-            "sha256" : "fea7162d4cca940a387f0587b93f6737d884bf74d8a9d7cfd978bc12cd0b202d",
-            "sha1" : "5fc239bebb8c484c3f5c58e663274ce668981651",
-            "url" : "https://www.cpan.org/src/5.0/perl-5.28.1.tar.xz",
-            "minor" : "28",
-            "md5" : "fbb590c305f2f88578f448581b8cf9c4",
-            "point" : "1"
-         },
+      "5.8.0" : {
          "gz" : {
-            "url" : "https://www.cpan.org/src/5.0/perl-5.28.1.tar.gz",
-            "sha1" : "6f1ad40f1a40b5f33814b7afff315e813622590b",
-            "sha256" : "3ebf85fe65df2ee165b22596540b7d5d42f84d4b72d84834f74e2e0b8956c347",
-            "minor" : "28",
-            "md5" : "838198c43d4f39d7af797e2f59c2bee5",
-            "point" : "1"
+            "point" : "0",
+            "sha256" : "818964dacbbe1269f8eac0b5e88b47430724676c9517967701f82b9bbb75d9ca",
+            "minor" : "8",
+            "md5" : "d9bdb180620306023fd35901a2878b62",
+            "sha1" : "be1e05876ca734464f8a770d61b1f15cca555719",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.8.0.tar.gz"
+         }
+      },
+      "5.20.0" : {
+         "gz" : {
+            "sha1" : "52087047fd35e1020387f7c492f594a397be4e12",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.20.0.tar.gz",
+            "md5" : "406ec049ebe3afcc80d9c76ec78ca4f8",
+            "minor" : "20",
+            "sha256" : "4e8c28ad6ecc89902f9cb2e76f2815bb1a8287ded278e15f7a36ca45f8bbcd02",
+            "point" : "0"
+         }
+      },
+      "5.12.0" : {
+         "gz" : {
+            "minor" : "12",
+            "md5" : "7db7c4b9d6f2e095eaebd9e22d81acc1",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.12.0.tar.gz",
+            "sha1" : "5341e60d099fdda71bc33b2a36e417fc0926518f",
+            "sha256" : "ba9d6188efd0b892a430edf0099878eb7958ba886708d1ec97467cb24c4d1451",
+            "point" : "0"
+         }
+      },
+      "5.24.2" : {
+         "gz" : {
+            "sha1" : "82172d72aca2cb4b0d7d00b9fbff3501c2ff03d6",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.24.2.tar.gz",
+            "md5" : "62a52f0f743fa461af449bd18d63886c",
+            "minor" : "24",
+            "point" : "2",
+            "sha256" : "609be8a45eca82e5c7fb045e62cbdad08cc5d6324b8dc5b362341d4502929ef4"
+         },
+         "xz" : {
+            "md5" : "b7c027975a476dbb9aa7202f760d8eca",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.24.2.tar.xz",
+            "sha1" : "61761989df70b10470bc387050974be72e33217e",
+            "minor" : "24",
+            "sha256" : "b25dd465ef32edf853078eb540b26243db0a3b5e1b1cc84393703d9564be67c0",
+            "point" : "2"
          }
       },
       "5.16.2" : {
          "gz" : {
+            "point" : "2",
             "sha256" : "8ef88b2feff1c925d7956670ce29059311de99f3c28e2d7f2cad6969f142d00e",
             "sha1" : "9e20e38e3460ebbac895341fd70a02189d03a490",
             "url" : "https://www.cpan.org/src/5.0/perl-5.16.2.tar.gz",
+            "md5" : "0e57f2d01d96471d9effc3fb43175e84",
+            "minor" : "16"
+         }
+      },
+      "5.26.0" : {
+         "gz" : {
+            "sha256" : "ebe7c66906d4fb55449380ab1b7e004eeef52c38d3443fa301f8e17a1a4cb67f",
+            "point" : "0",
+            "md5" : "89068bd18070425e8cbcef2869f78edf",
+            "sha1" : "e1abc572ef5bb69ebfa0f79a60a7eae753cc7b29",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.26.0.tar.gz",
+            "minor" : "26"
+         },
+         "xz" : {
+            "point" : "0",
+            "sha256" : "9bf2e3d0d72aad77865c3bdbc20d3b576d769c5c255c4ceb30fdb9335266bf55",
+            "minor" : "26",
+            "md5" : "8c6995718e4cb62188f0d5e3488cd91f",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.26.0.tar.xz",
+            "sha1" : "50f14ebdaa509ff5ef9b32ad388a1e6237c882dd"
+         }
+      },
+      "5.8.7" : {
+         "gz" : {
+            "minor" : "8",
+            "md5" : "dacefa1fe3c5b6d7bbc334ad94826131",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.8.7.tar.gz",
+            "sha1" : "a7390eda0b8c7127ff35a34fd42d5be9c1f08db1",
+            "point" : "7",
+            "sha256" : "916d7e1393ed09ca4c61b3c1ecb5f5564266c955db81ff587d2da8af7a7abaab"
+         }
+      },
+      "5.14.0" : {
+         "gz" : {
+            "point" : "0",
+            "sha256" : "fb0ed8aeca9e8903fb442a2dd51f27407ec1b9ee7aa1015ece15a90d5410123e",
+            "sha1" : "7e2aab2101b087f6f2b9405b626a3f064c23693d",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.14.0.tar.gz",
+            "md5" : "e688b0ddad50bca9a6223693a85c439d",
+            "minor" : "14"
+         }
+      },
+      "5.22.2" : {
+         "xz" : {
+            "minor" : "22",
+            "md5" : "5a9da684064cfe321dbc85eef75eecca",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.22.2.tar.xz",
+            "sha1" : "43b599def873413012fc8bcfd0a64bbce40b4ed2",
+            "sha256" : "b34dab1eabec056bec5a6682a57b55dab1bcf6afc60b098c9e2d99433dedc295",
+            "point" : "2"
+         },
+         "gz" : {
             "point" : "2",
+            "sha256" : "81ad196385aa168cb8bd785031850e808c583ed18a7901d33e02d4f70ada83c2",
+            "minor" : "22",
+            "md5" : "5767e2a10dd62a46d7b57f74a90d952b",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.22.2.tar.gz",
+            "sha1" : "2b84a711694be9a10e558c38c9aa43d86c7329a9"
+         }
+      },
+      "5.8.3" : {
+         "gz" : {
+            "md5" : "6d2b389f8c6424b7af303f417947714f",
+            "sha1" : "4c6f2aaa1b3a1d44535a1b54738d494e8fb90222",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.8.3.tar.gz",
+            "minor" : "8",
+            "sha256" : "4ca8bd5f20fcd9e4eddf16b44efa08c4969e31d02d7e0e91224b3ef5f657c1c6",
+            "point" : "3"
+         }
+      },
+      "5.18.4" : {
+         "gz" : {
+            "point" : "4",
+            "sha256" : "01a4e11a9a34616396c4a77b3cef51f76a297e1a2c2c490ae6138bf0351eb29f",
+            "minor" : "18",
+            "md5" : "1f9334ff730adc05acd3dd7130d295db",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.18.4.tar.gz",
+            "sha1" : "3ae1af872d5bf89f35b1e8d69be9098028fb158d"
+         }
+      },
+      "5.8.4" : {
+         "gz" : {
+            "sha256" : "89dcc463f88e0b785ee2cf2662d97c6b7d045393283664876370970a09b8cbef",
+            "point" : "4",
+            "minor" : "8",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.8.4.tar.gz",
+            "sha1" : "9614d8422301cf63939b32494c47d7a1a94942df",
+            "md5" : "912050a9cb6b0f415b76ba56052fb4cf"
+         }
+      },
+      "5.38.0" : {
+         "gz" : {
+            "url" : "https://www.cpan.org/src/5.0/perl-5.38.0.tar.gz",
+            "sha1" : "5c4dea06509959fedcccaada8d129518487399b7",
+            "md5" : "06934f18763474c1e3c9312c158f5d0e",
+            "minor" : "38",
+            "sha256" : "213ef58089d2f2c972ea353517dc60ec3656f050dcc027666e118b508423e517",
+            "point" : "0"
+         },
+         "xz" : {
+            "point" : "0",
+            "sha256" : "eca551caec3bc549a4e590c0015003790bdd1a604ffe19cc78ee631d51f7072e",
+            "md5" : "e1c8aaec897dd386c741f97eef9f2e87",
+            "sha1" : "2e7b1c56c1f795e8173c83a52e91218ba05ee72c",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.38.0.tar.xz",
+            "minor" : "38"
+         }
+      },
+      "5.40.1" : {
+         "gz" : {
+            "md5" : "091b9ff56b612b3833e59173f9b13f4c",
+            "sha1" : "e203dbc5dd5ab69bf37b658590557c681562af07",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.40.1.tar.gz",
+            "minor" : "40",
+            "point" : "1",
+            "sha256" : "02f8c45bb379ed0c3de7514fad48c714fd46be8f0b536bfd5320050165a1ee26"
+         },
+         "xz" : {
+            "sha256" : "dfa20c2eef2b4af133525610bbb65dd13777ecf998c9c5b1ccf0d308e732ee3f",
+            "point" : "1",
+            "minor" : "40",
+            "md5" : "bab3547a5cdf2302ee0396419d74a42e",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.40.1.tar.xz",
+            "sha1" : "4ffe5246c791df884363aed05ba81ba41cb02084"
+         }
+      },
+      "5.32.0" : {
+         "gz" : {
+            "minor" : "32",
+            "sha1" : "ddecb3117c016418b19ed3a8827e4b521b47d6bb",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.32.0.tar.gz",
+            "md5" : "7e12c2ef8f3fbf5ca615eecae222c4e3",
+            "point" : "0",
+            "sha256" : "efeb1ce1f10824190ad1cadbcccf6fdb8a5d37007d0100d2d9ae5f2b5900c0b4"
+         },
+         "xz" : {
+            "point" : "0",
+            "sha256" : "6f436b447cf56d22464f980fac1916e707a040e96d52172984c5d184c09b859b",
+            "md5" : "3812cd9a096a72cb27767c7e2e40441c",
+            "sha1" : "0426c89d8ad5542def3e0065c299d449230aeb6c",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.32.0.tar.xz",
+            "minor" : "32"
+         }
+      },
+      "5.36.2" : {
+         "xz" : {
+            "point" : "2",
+            "sha256" : "19445f09ea9f6ada33297010d5b76ac46be565568d1a4377a6bc736cd795a128",
+            "minor" : "36",
+            "md5" : "698ae4946b28e38a729916f04cc389a3",
+            "sha1" : "9bd6e3f7c333e2e5f14c8650333fc29da3df2d90",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.36.2.tar.xz"
+         },
+         "gz" : {
+            "md5" : "ffcd0efc3ff0f2788609ce74f7d3d6e5",
+            "sha1" : "92d782b6086e3677cf8c8b557027b1fd27052856",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.36.2.tar.gz",
+            "minor" : "36",
+            "point" : "2",
+            "sha256" : "059d601f6bb637f31e0e39e0930b3a4db097991dd8cc2254301216befb445164"
+         }
+      },
+      "5.14.4" : {
+         "gz" : {
+            "sha256" : "803fd44c492fcef79fda456a6f50455766e00ddec2e568a543630f65ff3f44cb",
+            "point" : "4",
+            "md5" : "d2648c500f3169ab754bbfb30731fbe4",
+            "sha1" : "2fdbbf39b3bbd79e42a7cf42fc05bf9891f077a1",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.14.4.tar.gz",
+            "minor" : "14"
+         }
+      },
+      "5.12.4" : {
+         "gz" : {
+            "md5" : "fd22aba88e4e27ab879f142eec6452a0",
+            "sha1" : "b64a5d1fefe6db9c4144b4adba2c360afa9c29ea",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.12.4.tar.gz",
+            "minor" : "12",
+            "sha256" : "c2a35aa538fb22ec1423fc2bdea79686bae22e119a56b189e70a6ca2d9d4b5dd",
+            "point" : "4"
+         }
+      },
+      "5.30.2" : {
+         "xz" : {
+            "md5" : "4bfa12b528522a50de0470b8b70b9b3b",
+            "sha1" : "d82cdaa610a3e749e821fc77004b1b4bfd5ebd28",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.30.2.tar.xz",
+            "minor" : "30",
+            "point" : "2",
+            "sha256" : "a1aa88bd6fbbdc2e82938afbb76c408b0ea847317737b712dc196cc7907a5259"
+         },
+         "gz" : {
+            "point" : "2",
+            "sha256" : "66db7df8a91979eb576fac91743644da878244cf8ee152f02cd6f5cd7a731689",
+            "sha1" : "e02a31cc8f536b4927d8e018d265cddb790bb4e2",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.30.2.tar.gz",
+            "md5" : "1fffdce56f2b307608e3c7497f66daad",
+            "minor" : "30"
+         }
+      },
+      "5.34.0" : {
+         "xz" : {
+            "minor" : "34",
+            "md5" : "df7ecb0653440b26dc951ad9dbfab517",
+            "sha1" : "d461e206a1dca5e79d39e77debf0b564f6d77d37",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.34.0.tar.xz",
+            "point" : "0",
+            "sha256" : "82c2e5e5c71b0e10487a80d79140469ab1f8056349ca8545140a224dbbed7ded"
+         },
+         "gz" : {
+            "url" : "https://www.cpan.org/src/5.0/perl-5.34.0.tar.gz",
+            "sha1" : "870b4e1ffe33f94a4996a4acbbcebb8422c5e73a",
+            "md5" : "2acf2ef147e41730e572251ed079bc1a",
+            "minor" : "34",
+            "sha256" : "551efc818b968b05216024fb0b727ef2ad4c100f8cb6b43fab615fa78ae5be9a",
+            "point" : "0"
+         }
+      },
+      "5.22.4" : {
+         "gz" : {
+            "minor" : "22",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.22.4.tar.gz",
+            "sha1" : "fd79af20e6454d1bb5e5e6ac4774a1e295d4d794",
+            "md5" : "31a71821682e02378fcdadeed85688b8",
+            "point" : "4",
+            "sha256" : "ba9ef57c2b709f2dad9c5f6acf3111d9dfac309c484801e0152edbca89ed61fa"
+         },
+         "xz" : {
+            "sha256" : "713243dce27d7aa0bdbf52b2070de5ce449f9ffbcc14a93efbc6f2beff0f5ce8",
+            "point" : "4",
+            "minor" : "22",
+            "md5" : "0831879e8a6e18adeb922fb01b1beb32",
+            "sha1" : "53d85affaeb84ed859c2710c3e4330314b5115b5",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.22.4.tar.xz"
+         }
+      },
+      "5.36.0" : {
+         "xz" : {
+            "point" : "0",
+            "sha256" : "0f386dccbee8e26286404b2cca144e1005be65477979beb9b1ba272d4819bcf0",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.36.0.tar.xz",
+            "sha1" : "938c56a77ae094eb7f5019318a5e4efb2d9c74fa",
+            "md5" : "826e42da130011699172fd655e49cfa2",
+            "minor" : "36"
+         },
+         "gz" : {
+            "md5" : "68a2683bb79979c26ec57876abb7f303",
+            "sha1" : "5fa41c8dffd9700f0c8427de7dd19f06b095fa6d",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.36.0.tar.gz",
+            "minor" : "36",
+            "sha256" : "e26085af8ac396f62add8a533c3a0ea8c8497d836f0689347ac5abd7b7a4e00a",
+            "point" : "0"
+         }
+      },
+      "5.34.2" : {
+         "xz" : {
+            "md5" : "86cd759446f8905bdec4b17259ed6e65",
+            "sha1" : "66a3c65f0282a0120116c6688366965449836d12",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.34.2.tar.xz",
+            "minor" : "34",
+            "point" : "2",
+            "sha256" : "5e2cb14f0af985b1739a55b8f16d2cab9c7a913311bfb4892d1b3bf1034f341c"
+         },
+         "gz" : {
+            "minor" : "34",
+            "md5" : "7d045dfd67aebe42a083736e44999281",
+            "sha1" : "b175e6fd19f4efe55457c02e11de57911a4151a6",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.34.2.tar.gz",
+            "point" : "2",
+            "sha256" : "bd4eb97119f9c7ed1510c4b9b4ff218099135b2297b7c15d0f1b178d38c90fa4"
+         }
+      },
+      "5.30.0" : {
+         "xz" : {
+            "md5" : "037c35000550bdcb47552ad0f6d3064d",
+            "sha1" : "cc8d1e08ffe4624c197a44d02855632725d39f8e",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.30.0.tar.xz",
+            "minor" : "30",
+            "point" : "0",
+            "sha256" : "ac501cad4af904d33370a9ea39dbb7a8ad4cb19bc7bc8a9c17d8dc3e81ef6306"
+         },
+         "gz" : {
+            "minor" : "30",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.30.0.tar.gz",
+            "sha1" : "aa5620fb5a4ca125257ae3f8a7e5d05269388856",
+            "md5" : "9770584cdf9b5631c38097645ce33549",
+            "sha256" : "851213c754d98ccff042caa40ba7a796b2cee88c5325f121be5cbb61bbf975f2",
+            "point" : "0"
+         }
+      },
+      "5.24.4" : {
+         "xz" : {
+            "sha256" : "7f080287ff64750270689843ae945f02159a33cb8f2fc910248c15befba5db84",
+            "point" : "4",
+            "minor" : "24",
+            "sha1" : "f5b1301556eb2a447e51274dea48840b295f7ff7",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.24.4.tar.xz",
+            "md5" : "04622bc4d3941dc7eb571c52b7c02993"
+         },
+         "gz" : {
+            "point" : "4",
+            "sha256" : "bf2f3dddb10154d833cdb415a93f1672b6d8599e87913b66c085c332cb361970",
+            "minor" : "24",
+            "md5" : "0cf94185b622d37a820edfc87e89c642",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.24.4.tar.gz",
+            "sha1" : "85e57c3c13d5f4243e3ced98c85e0c007c7936c9"
+         }
+      },
+      "5.38.2" : {
+         "xz" : {
+            "point" : "2",
+            "sha256" : "d91115e90b896520e83d4de6b52f8254ef2b70a8d545ffab33200ea9f1cf29e8",
+            "minor" : "38",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.38.2.tar.xz",
+            "sha1" : "af1d5f9e0499f3cfa4736433631aebf7624714da",
+            "md5" : "d3957d75042918a23ec0abac4a2b7e0a"
+         },
+         "gz" : {
+            "sha256" : "a0a31534451eb7b83c7d6594a497543a54d488bc90ca00f5e34762577f40655e",
+            "point" : "2",
+            "minor" : "38",
+            "sha1" : "bcb6782ae5ddeca45cbcb263bef8cd3dc9040679",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.38.2.tar.gz",
+            "md5" : "ef767335cb36f4e2449049741ef96349"
+         }
+      },
+      "5.16.3" : {
+         "gz" : {
+            "sha256" : "69cf08dca0565cec2c5c6c2f24b87f986220462556376275e5431cc2204dedb6",
+            "point" : "3",
+            "sha1" : "83678adf56d3dc51f47a90444a891f4fe16868da",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.16.3.tar.gz",
+            "md5" : "eb5c40f2575df6c155bc99e3fe0a9d82",
+            "minor" : "16"
+         }
+      },
+      "5.20.1" : {
+         "gz" : {
+            "sha1" : "dad920583cab07e96bb8860a70eebc5fa9cf8e4d",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.20.1.tar.gz",
+            "md5" : "7a195abb7d6769f751e90c7d30dcf2e0",
+            "minor" : "20",
+            "point" : "1",
+            "sha256" : "fef10210f9e6f4dc2d190be0aee8e1fa2af664630f1d415868d33eebca26d4b5"
+         }
+      },
+      "5.12.1" : {
+         "gz" : {
+            "point" : "1",
+            "sha256" : "1320a5d854fd7d1870ffa9d16020d9b72acc9eb128014194a1d1667f5967aee0",
+            "minor" : "12",
+            "md5" : "a57b6c82e9319145db72936b5e2fcbc7",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.12.1.tar.gz",
+            "sha1" : "83b99f08379782dc06594a85eeb279edc5b0ca44"
+         }
+      },
+      "5.8.9" : {
+         "gz" : {
+            "point" : "9",
+            "sha256" : "60dfe024286299b547895b6bc8f41c20c7e83d292f3a406e113ba1951aa38da1",
+            "md5" : "2c8d78a61fb8c4c2c19fc514eb591500",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.8.9.tar.gz",
+            "sha1" : "d5ba4f3c6903e3424bc16c2748848440e446cd54",
+            "minor" : "8"
+         }
+      },
+      "5.24.3" : {
+         "gz" : {
+            "point" : "3",
+            "sha256" : "cb009a5107bd99b4e92e3a73ecf03159b1f166e26bf44c9ab8de093c0bea57d4",
+            "sha1" : "1b66e381a8daaef79fc92b2855b9f5c70a496520",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.24.3.tar.gz",
+            "md5" : "b25f1b1a0082e9e2043eb3c13bba6044",
+            "minor" : "24"
+         },
+         "xz" : {
+            "sha256" : "03fe3e4ea39d2a4982703572599a80f3d5f368a1359ed89746ea1d8bec6cfbba",
+            "point" : "3",
+            "minor" : "24",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.24.3.tar.xz",
+            "sha1" : "4fd303359b0643648b9ec504c90f832229b9a53c",
+            "md5" : "e960a8e9f6585205cacb913e97657cb6"
+         }
+      },
+      "5.26.1" : {
+         "xz" : {
+            "minor" : "26",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.26.1.tar.xz",
+            "sha1" : "403bb1804cb41416153d908eea093f2be22a77f6",
+            "md5" : "70e988b4318739b0cf3ad5e120bfde88",
+            "sha256" : "fe8208133e73e47afc3251c08d2c21c5a60160165a8ab8b669c43a420e4ec680",
+            "point" : "1"
+         },
+         "gz" : {
+            "sha256" : "e763aa485e8dc1a70483dbe6d615986bbf32b977f38016480d68c99237e701dd",
+            "point" : "1",
+            "md5" : "a7e5c531ee1719c53ec086656582ea86",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.26.1.tar.gz",
+            "sha1" : "74a0822429508d593513a0dfd6f51a907bad68d0",
+            "minor" : "26"
+         }
+      },
+      "5.22.3" : {
+         "xz" : {
+            "md5" : "6cbd9bf004bcf27f696857b1572f6fd0",
+            "sha1" : "4c9de6646d559c81116c7a047e7cccf609abbd27",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.22.3.tar.xz",
+            "minor" : "22",
+            "sha256" : "899d6512301f3dfa6240e98327205e017d08b539c90632228b53faab267e1d8f",
+            "point" : "3"
+         },
+         "gz" : {
+            "point" : "3",
+            "sha256" : "1b351fb4df7e62ec3c8b2a9f516103595b2601291f659fef1bbe3917e8410083",
+            "minor" : "22",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.22.3.tar.gz",
+            "sha1" : "2966b89d7081ffefca06c9cfed0ee21ec621b61c",
+            "md5" : "aa4f236dc2fc6f88b871436b8d0fda95"
+         }
+      },
+      "5.14.1" : {
+         "gz" : {
+            "minor" : "14",
+            "md5" : "0b74cffa3a10aee08442f950aecbaeec",
+            "sha1" : "bd24b7572330c4f87a47ea841f88deb925245a8b",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.14.1.tar.gz",
+            "point" : "1",
+            "sha256" : "169e0458772c0a998118ae7bd253c23d19135387b746dcfa3e15319dc137543e"
+         }
+      },
+      "5.28.3" : {
+         "gz" : {
+            "point" : "3",
+            "sha256" : "afc9c1d661597ae14d9e883c5071092bed73f60c3109b294823ea01aca705114",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.28.3.tar.gz",
+            "sha1" : "2bbbc0db1b8f55ac6c3468ad883688971f7871ab",
+            "md5" : "18c2c82afb0508e7cee74d6f92f04966",
+            "minor" : "28"
+         },
+         "xz" : {
+            "sha1" : "3bee8e910b6f00faf5ca2ab4ec959590c8840d5e",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.28.3.tar.xz",
+            "md5" : "efc03372d3cbeb14d49e30454d1d7cf3",
+            "minor" : "28",
+            "point" : "3",
+            "sha256" : "77dc1ddf541643af14d585867d3d0741cce45d0dbe8f1467024e63165d9e2fc5"
+         }
+      },
+      "5.18.1" : {
+         "gz" : {
+            "point" : "1",
+            "sha256" : "655e11a8ffba8853efcdce568a142c232600ed120ac24aaebb4e6efe74e85b2b",
+            "sha1" : "524a10ba76e394e5d40b319f5609cb4c4a96f564",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.18.1.tar.gz",
+            "md5" : "304cb5bd18e48c44edd6053337d3386d",
+            "minor" : "18"
+         }
+      },
+      "5.28.1" : {
+         "xz" : {
+            "point" : "1",
+            "sha256" : "fea7162d4cca940a387f0587b93f6737d884bf74d8a9d7cfd978bc12cd0b202d",
+            "sha1" : "5fc239bebb8c484c3f5c58e663274ce668981651",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.28.1.tar.xz",
+            "md5" : "fbb590c305f2f88578f448581b8cf9c4",
+            "minor" : "28"
+         },
+         "gz" : {
+            "sha256" : "3ebf85fe65df2ee165b22596540b7d5d42f84d4b72d84834f74e2e0b8956c347",
+            "point" : "1",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.28.1.tar.gz",
+            "sha1" : "6f1ad40f1a40b5f33814b7afff315e813622590b",
+            "md5" : "838198c43d4f39d7af797e2f59c2bee5",
+            "minor" : "28"
+         }
+      },
+      "5.18.3" : {
+         "gz" : {
+            "sha1" : "d47e3589a03dc8d7dbc11444f0dd554cbc6a9e82",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.18.3.tar.gz",
+            "md5" : "16c1ddb143af7899d21e8dbe56946e77",
+            "minor" : "18",
+            "point" : "3",
+            "sha256" : "87acb398b571623a40d467357c74a3e53f3d16222d0a2b40b627aea5e04f7b46"
+         }
+      },
+      "5.20.3" : {
+         "gz" : {
+            "minor" : "20",
+            "md5" : "d647d0ea5a7a8194c34759ab9f2610cd",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.20.3.tar.gz",
+            "sha1" : "1091d56b81c1060601d5228fd42ad5cf10546622",
+            "sha256" : "3524e3a76b71650ab2f794fd68e45c366ec375786d2ad2dca767da424bbb9b4a",
+            "point" : "3"
+         }
+      },
+      "5.16.1" : {
+         "gz" : {
+            "sha1" : "60f2b81e3ffaff3030962ccbc02cd04f91f69ad5",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.16.1.tar.gz",
+            "md5" : "bcc5136007177b0fe2b6fd739fb66b84",
             "minor" : "16",
-            "md5" : "0e57f2d01d96471d9effc3fb43175e84"
+            "point" : "1",
+            "sha256" : "759a2479587024fa64685e04dbfb4ef07461aef3aff932a34d0c1435d4fa1d97"
+         }
+      },
+      "5.12.3" : {
+         "gz" : {
+            "sha256" : "5678bfd5c2cd59253a26171bf3e681235433b00c730eea8a8046e1b225c11d2f",
+            "point" : "3",
+            "md5" : "29975a69dce54e47fcd6331c085c6c99",
+            "sha1" : "ecf51cc7c91ef000671659934a719c8bd6a70138",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.12.3.tar.gz",
+            "minor" : "12"
+         }
+      },
+      "5.24.1" : {
+         "gz" : {
+            "minor" : "24",
+            "sha1" : "19b218bbc3a63a8408ed56b93928fd9a4c1b5c83",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.24.1.tar.gz",
+            "md5" : "765ef511b5b87a164e2531403ee16b3c",
+            "sha256" : "e6c185c9b09bdb3f1b13f678999050c639859a7ef39c8cad418448075f5918af",
+            "point" : "1"
+         },
+         "xz" : {
+            "sha256" : "03a77bac4505c270f1890ece75afc7d4b555090b41aa41ea478747e23b2afb3f",
+            "point" : "1",
+            "minor" : "24",
+            "md5" : "af6a84c7c3e2b8b269c105a5db2f6d53",
+            "sha1" : "5bec25d8821b81a5939ee220997f4c8ab1c13e31",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.24.1.tar.xz"
+         }
+      },
+      "5.26.3" : {
+         "xz" : {
+            "minor" : "26",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.26.3.tar.xz",
+            "sha1" : "ca73432ac07288fdce2063f5e09c642e28584226",
+            "md5" : "218d73f2334d2f3fdaff5a1f35358247",
+            "point" : "3",
+            "sha256" : "e0a17cdaed5304aea1783e507e56bb0001dd72c46f211553ead3a580c3f38135"
+         },
+         "gz" : {
+            "sha1" : "940e1739dd979a284f343dff57ddcbf7f555b928",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.26.3.tar.gz",
+            "md5" : "34b92527893956ab02d23a205c71df53",
+            "minor" : "26",
+            "point" : "3",
+            "sha256" : "b75ae40de8292fa53021b35eb3552fcaf65d7891ce4c5b6668d665cb0233c493"
+         }
+      },
+      "5.10.1" : {
+         "gz" : {
+            "sha256" : "cb7f26ea4b2b28d6644354d87a269d01cac1b635287dae64e88eeafa24b44f35",
+            "point" : "1",
+            "minor" : "10",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.10.1.tar.gz",
+            "sha1" : "8536ed1c14444d1efea069525a816fbc7be7109f",
+            "md5" : "b9b2fdb957f50ada62d73f43ee75d044"
+         }
+      },
+      "5.22.1" : {
+         "gz" : {
+            "minor" : "22",
+            "md5" : "19295bbb775a3c36123161b9bf4892f1",
+            "sha1" : "105fe2515cb6e7d22e583336f93823d7407b9359",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.22.1.tar.gz",
+            "sha256" : "2b475d0849d54c4250e9cba4241b7b7291cffb45dfd083b677ca7b5d38118f27",
+            "point" : "1"
+         },
+         "xz" : {
+            "minor" : "22",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.22.1.tar.xz",
+            "sha1" : "8cb3b099f7c74d4f541a9318c108906daef942c1",
+            "md5" : "6671e4829cbaf9cecafa9a84f141b0a3",
+            "point" : "1",
+            "sha256" : "9e87317d693ce828095204be0d09af8d60b8785533fadea1a82b6f0e071e5c79"
          }
       },
       "5.14.3" : {
          "gz" : {
-            "url" : "https://www.cpan.org/src/5.0/perl-5.14.3.tar.gz",
-            "sha1" : "c9bed7b07ab9df485e8fd6c86267e608cbcb4ad2",
-            "sha256" : "03638a4f01bc26b81231233671524b4163849a3a9ea5cc2397293080c4ea339f",
             "minor" : "14",
             "md5" : "f6a3d878c688d111b495c87db56c5be5",
-            "point" : "3"
+            "sha1" : "c9bed7b07ab9df485e8fd6c86267e608cbcb4ad2",
+            "url" : "https://www.cpan.org/src/5.0/perl-5.14.3.tar.gz",
+            "point" : "3",
+            "sha256" : "03638a4f01bc26b81231233671524b4163849a3a9ea5cc2397293080c4ea339f"
          }
       }
    }
