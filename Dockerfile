@@ -34,13 +34,8 @@ RUN cd /tmp \
 	&& patchperl \
 	&& ./Configure -des -Dprefix=/usr/local \
 	&& make install \
-	&& cd /tmp \
-	&& git clone https://github.com/briandfoy/app-cpan-upgraded.git \
-	&& cd app-cpan-upgraded \
-	&& /usr/local/bin/cpan . \
-	&& rm -rf /tmp/* \
-	&& /usr/local/bin/cpan App::Cpan::Upgraded \
-	&& rm -rf /root/.cpan
+	&& rm -rf /tmp/*
+
 
 ENV PATH="/usr/local/bin:${PATH}"
 CMD [ "/usr/local/bin/perl", "-de0" ]
