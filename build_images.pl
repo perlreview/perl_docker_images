@@ -58,7 +58,6 @@ foreach my $version ( $latest->@* ) {
 	$args{perl_url_basename} = $args{perl_url} =~ s|.*/||r;
 
 	build_image( \%args );
-	last;
 	}
 
 # https://www.docker.com/blog/generate-sboms-with-buildkit/
