@@ -20,6 +20,7 @@ my %args = (
 	base_tag      => 'latest',
 	repo_dir      => 'https://github.com/perlreview/perl_docker_images',
 	username      => 'perlreview',
+	platforms     => [qw( linux/amd64 linux/arm64 linux/386 )],
 	);
 
 my $version_info = do {
@@ -72,6 +73,7 @@ sub build_image ($args) {
 		q(-t), $args->{latest_tag},
 		qw(--progress plain),
 		q(--sbom=true),
+		q(--platform),  join( ',', $args->{platforms}->@*),
 		q(--label),     qq(org.opencontainers.image.authors='Perl $args->{perl_version} with extras'),
 		q(--label),     qq(org.opencontainers.image.description='Perl $args->{perl_version} with extras'),
 		q(--label),     qq(org.opencontainers.image.revision=$args->{commit}),
