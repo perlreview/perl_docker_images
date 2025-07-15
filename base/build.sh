@@ -4,7 +4,7 @@ COMMIT=$(git rev-parse HEAD)
 DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 DOCKER_HUB_ACCOUNT=perlreview
 NAME=base
-VERSION=1.0.8
+VERSION=2.0.1
 IMAGE_NAME=$DOCKER_HUB_ACCOUNT/$NAME
 TAG=$IMAGE_NAME:$VERSION
 LATEST_TAG=$IMAGE_NAME:latest
@@ -13,9 +13,10 @@ USERNAME=perlreview
 BASE_IMAGE=debian:bookworm-slim
 
 # https://www.docker.com/blog/docker-best-practices-using-tags-and-labels-to-manage-docker-image-sprawl/
-docker build . \
+docker buildx build . \
 	-t $TAG \
 	-t $LATEST_TAG \
+	--platform linux/amd64,linux/arm64,linux/386 \
 	--progress=plain \
 	--sbom=true \
 	--label="org.opencontainers.image.revision=$COMMIT" \
