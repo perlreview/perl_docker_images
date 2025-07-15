@@ -41,8 +41,19 @@ my $latest = do {
 	]
 	};
 
-foreach my $version ( $latest->@* ) {
-	next unless $version eq '5.40.1';
+my @versions = do {
+	if( @ARGV > 0 ) { @ARGV }
+	else            { $latest->@* }
+};
+
+foreach my $version ( @versions ) {
+	# next unless $version eq '5.40.1';
+	next if $version =~ /5.(42|16)/;
+	unless( exists $version_info->{$version} ) {
+		warn "Do not have settings for <$version>. Skipping.\n";
+		next VERSION;
+		}
+
 	my $compression = 'gz';
 	my $info = $version_info->{$version}{$compression};
 	next if $info->{minor} % 2;
