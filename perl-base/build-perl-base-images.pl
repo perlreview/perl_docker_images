@@ -47,8 +47,6 @@ my @versions = do {
 };
 
 foreach my $version ( @versions ) {
-	# next unless $version eq '5.40.1';
-	next if $version =~ /5.(42|16)/;
 	unless( exists $version_info->{$version} ) {
 		warn "Do not have settings for <$version>. Skipping.\n";
 		next VERSION;
@@ -99,12 +97,12 @@ sub build_image ($args) {
 		q(--build-arg), qq(USERNAME=$args->{username}),
 		q(--push);
 
+	say STDERR dumper(\@command);
+	say join ' ', @command;
 	my $rc = system @command;
 
 	unless( $rc == 0 ) {
 		warn "docker build failed: $!\n";
-		warn dumper($args);
-		warn dumper(\@command);
 		return;
 		}
 
