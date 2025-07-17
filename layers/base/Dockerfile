@@ -30,5 +30,3 @@ RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get -y install gh \
 	&& DEBIAN_FRONTEND=noninteractive apt-get clean \
 	&& rm -rf /var/cache/apt/* /var/lib/apt/lists/*
-
-RUN rm -rf ${WORKDIR}/*
