@@ -3,7 +3,6 @@ FROM ${BASE_IMAGE}
 
 ARG AUTHOR
 ARG VENDOR
-ARG WORKDIR=/tmp
 
 LABEL org.opencontainers.image.authors="${AUTHOR}" \
 	org.opencontainers.image.description="The base layer that includes everything common among the Perl docker images from The Perl Review" \
@@ -12,8 +11,6 @@ LABEL org.opencontainers.image.authors="${AUTHOR}" \
 	org.opencontainers.image.url="https://github.com/perlreview/perl_docker_images" \
 	org.opencontainers.image.source="https://github.com/perlreview/perl_docker_images/base/Dockerfile" \
 	org.opencontainers.image.vendor="${VENDOR}"
-
-WORKDIR ${WORKDIR}
 
 RUN apt-get update \
 	&& DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
