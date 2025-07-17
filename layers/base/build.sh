@@ -1,10 +1,10 @@
 #!/bin/sh
 
 COMMIT=$(git rev-parse HEAD)
-DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+DATE=$(date -u +"%Y%m%d.%H%M%S")
 DOCKER_HUB_ACCOUNT=perlreview
 NAME=base
-VERSION=2.0.1
+VERSION=$DATE
 IMAGE_NAME=$DOCKER_HUB_ACCOUNT/$NAME
 TAG=$IMAGE_NAME:$VERSION
 LATEST_TAG=$IMAGE_NAME:latest
