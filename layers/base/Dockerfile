@@ -4,6 +4,7 @@ FROM ${BASE_IMAGE}
 ARG AUTHOR
 ARG VENDOR
 
+# https://www.docker.com/blog/docker-best-practices-using-tags-and-labels-to-manage-docker-image-sprawl/
 LABEL org.opencontainers.image.authors="${AUTHOR}" \
 	org.opencontainers.image.description="The base layer that includes everything common among the Perl docker images from The Perl Review" \
 	org.opencontainers.image.title="Base image for https://github.com/perlreview/perl_docker_images" \
