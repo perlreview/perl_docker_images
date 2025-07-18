@@ -67,7 +67,7 @@ VERSION: foreach my $version ( @versions ) {
 	$args{perl_url}     = $info->{url};
 	$args{perl_url_basename} = $args{perl_url} =~ s|.*/||r;
 
-	build_image( \%args );
+	my $rc = build_image( \%args );
 	}
 
 # https://www.docker.com/blog/generate-sboms-with-buildkit/
@@ -99,13 +99,18 @@ sub build_image ($args) {
 		q(--push);
 
 	say STDERR dumper(\@command);
-	say join ' ', @command;
-	my $rc = system @command;
 
+	my $rc = system @command;
 	unless( $rc == 0 ) {
 		warn "docker build failed: $!\n";
 		return;
 		}
 
 	$rc = system( qw(docker push), "$args->{account}/$args->{name}", q(--all-tags) );
+	unless( $rc == 0 ) {
+		warn "docker push failed: $!\n";
+		return;
+		}
+
+	return 1;
 	}
