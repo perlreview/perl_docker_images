@@ -39,3 +39,5 @@ different name.
 ## See Also
 
 * https://hub.docker.com/_/perl
+* https://docs.github.com/en/actions/how-tos/use-cases-and-examples/publishing-packages/publishing-docker-images#publishing-images-to-docker-hub-and-github-packages
+* https://docs.github.com/en/actions/reference/dockerfile-support-for-github-actions
