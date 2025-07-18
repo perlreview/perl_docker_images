@@ -57,7 +57,7 @@ VERSION: foreach my $version ( @versions ) {
 	my $info = $version_info->{$version}{$compression};
 	next if $info->{minor} % 2;
 
-	say dumper($info);
+	say STDERR dumper($info);
 
 	$args{perl_version} = $version;
 	$args{name}         = "perl-$version-base";
