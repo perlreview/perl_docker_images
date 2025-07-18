@@ -13,7 +13,6 @@ ARG PERL_URL
 ARG PERL_URL_BASENAME
 ARG PERL_VERSION
 ARG REPO_DIR
-ARG USERNAME
 
 LABEL org.opencontainers.image.authors="briandfoy@pobox.com" \
 	org.opencontainers.image.title="Base image for https://github.com/perlreview/perl_docker_images" \
@@ -21,8 +20,6 @@ LABEL org.opencontainers.image.authors="briandfoy@pobox.com" \
 	org.opencontainers.image.url="https://github.com/perlreview/perl_docker_images" \
 	org.opencontainers.image.source="https://github.com/perlreview/perl_docker_images" \
 	org.opencontainers.image.vendor="The Perl Review"
-
-USER root
 
 RUN cd /tmp \
 	&& echo PERL_VERION ${PERL_VERSION} \
