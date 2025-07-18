@@ -4,6 +4,7 @@ use utf8;
 use strict;
 use experimental qw(signatures);
 
+use FindBin;
 use JSON::PP qw(decode_json);
 use Mojo::File;
 use Mojo::Util qw(dumper);
@@ -24,13 +25,13 @@ my %args = (
 	);
 
 my $version_info = do {
-	my $version_data_file = Mojo::File->new('data/checksums.json');
+	my $version_data_file = Mojo::File->new("$FindBin::Bin/../../data/checksums.json");
 	my $json = $version_data_file->slurp;
 	decode_json( $json )->{data};
 	};
 
 my $latest = do {
-	my $version_data_file = Mojo::File->new('data/latest.json');
+	my $version_data_file = Mojo::File->new("$FindBin::Bin/../../data/latest.json");
 	my $json = $version_data_file->slurp;
 	my $data = decode_json( $json )->{data};
 
