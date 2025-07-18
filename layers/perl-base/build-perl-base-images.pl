@@ -106,11 +106,5 @@ sub build_image ($args) {
 		return;
 		}
 
-	$rc = system( qw(docker push), "$args->{account}/$args->{name}", q(--all-tags) );
-	unless( $rc == 0 ) {
-		warn "docker push failed: $!\n";
-		return;
-		}
-
 	return 1;
 	}
