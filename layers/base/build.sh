@@ -11,6 +11,20 @@ LATEST_TAG=$IMAGE_NAME:latest
 AUTHOR=briandfoy@pobox.com
 USERNAME=perlreview
 BASE_IMAGE=debian:bookworm-slim
+CURRENT_BUILD_DIGEST_FILE=/tmp/$0-$$.digest
+PRIOR_BUILD_DIGEST_FILE=.digest.txt
+DIGEST_FILES="build.sh Dockerfile"
+
+sha256sum $DIGEST_FILES > $CURRENT_BUILD_DIGEST_FILE
+
+if [ -e $PRIOR_BUILD_DIGEST_FILE ]; then
+	if cmp -s $PRIOR_BUILD_DIGEST_FILE $CURRENT_BUILD_DIGEST_FILE; then
+	  echo "Digests are identical: no need to rebuild."
+	  exit 1
+	else
+	  echo "Digests differ: rebuilding"
+	fi
+fi
 
 # https://www.docker.com/blog/docker-best-practices-using-tags-and-labels-to-manage-docker-image-sprawl/
 docker buildx build . \
@@ -28,3 +42,5 @@ docker buildx build . \
 	--build-arg VENDOR=${VENDOR} \
 	--build-arg BASE_IMAGE=${BASE_IMAGE} \
 	--push
+
+sha256sum $DIGEST_FILES > $PRIOR_BUILD_DIGEST_FILE
