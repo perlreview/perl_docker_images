@@ -1,2 +1,3 @@
 perl-5.40.1.tar.gz
 .DS_Store
+layers/base/.digest.txt
