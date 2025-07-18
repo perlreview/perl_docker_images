@@ -15,7 +15,7 @@ my %args = (
 	date          => do { `date -u +"%Y-%m-%dT%H:%M:%SZ"` =~ s/\s+\z//r },
 	image_version => do {
 		my( $minute, $hour, $day, $month, $year ) = (localtime)[1..5];
-		sprintf '%4d%02d%02d.%02d%02d', $year + 1900, $month, $day, $hour, $minute;
+		sprintf '%4d%02d%02d.%02d%02d', $year + 1900, $month + 1, $day, $hour, $minute;
 		},
 	base_name     => 'base',
 	base_tag      => 'latest',
