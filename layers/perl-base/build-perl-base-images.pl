@@ -60,8 +60,10 @@ VERSION: foreach my $version ( @versions ) {
 	say STDERR dumper($info);
 
 	$args{perl_version} = $version;
+	$args{perl_minor_version} = $version =~ s/\A5\.\d+\K.*//r;
 	$args{name}         = "perl-$version-base";
 	$args{tag}          = "$args{account}/$args{name}:$args{image_version}";
+	$args{minor_tag}    = "$args{account}/$args{name}:$args{perl_minor_version}";
 	$args{latest_tag}   = "$args{account}/$args{name}:latest";
 	$args{digest}       = $info->{sha256};
 	$args{perl_url}     = $info->{url};
@@ -76,9 +78,10 @@ sub build_image ($args) {
 
 	local $ENV{BUILDKIT_PROGRESS} = 'plain';
 
-	my @command = ( qw(docker buildx build . -t), $args->{tag} );
+	my @command = ( qw(docker buildx build .) );
 	push @command,
 		q(-t), $args->{tag},
+		q(-t), $args->{minor_tag},
 		q(-t), $args->{latest_tag},
 		qw(--progress plain),
 		q(--sbom=true),
