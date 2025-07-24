@@ -31,4 +31,6 @@ RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt update \
     && DEBIAN_FRONTEND=noninteractive apt-get -y install gh \
 	&& DEBIAN_FRONTEND=noninteractive apt-get clean \
+	&& DEBIAN_FRONTEND=noninteractive apt-get autoclean \
+	&& DEBIAN_FRONTEND=noninteractive apt-get autoremove \
 	&& rm -rf /var/cache/apt/* /var/lib/apt/lists/*
