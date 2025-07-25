@@ -21,6 +21,7 @@ USER root
 
 ENV OPENSSLDIR=/usr/lib/ssl
 ENV OPENSSL_PREFIX=/usr
+ENV MAKEFILE_PL
 ENV PERL_CPANM_OPT=--verbose
 
 RUN cd /tmp \
@@ -33,11 +34,11 @@ RUN cd /tmp \
 	&& /usr/local/bin/perl bin/cpanm --verbose . \
 	&& which cpanm \
 	&& cd /root \
+	&& /usr/local/bin/cpanm --configure-args="CCFLAGS=-I/usr/include" Net::SSLeay \
 	&& /usr/local/bin/cpanm --notest \
 		App::Cpan \
 		ExtUtils::MakeMaker \
 		HTTP::Tiny \
-		Net::SSLeay \
 		IO::Socket::SSL \
 		LWP \
 		LWP::Protocol::https \
