@@ -65,8 +65,8 @@ VERSION: foreach my $version ( @versions ) {
 	$args{perl_base_name} = "perl-$version-base";
 	$args{digest}         = $info->{sha256};
 
-	my $rc = build_image( \%args );
-	exit 1 unless $rc == 0;
+	my $success = build_image( \%args );
+	exit 1 unless $success;
 	}
 
 # https://www.docker.com/blog/generate-sboms-with-buildkit/

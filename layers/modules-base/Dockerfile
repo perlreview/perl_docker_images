@@ -24,7 +24,7 @@ ENV OPENSSL_PREFIX=/usr/lib/ssl
 ENV PERL_CPANM_OPT=--verbose
 
 RUN cd /tmp \
-	&& apt-get update && apt-get install pkg-config \
+	&& apt-get update && apt-get install -y pkg-config \
 	&& curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7047.tar.gz \
 	&& tar -xzf App-cpanminus-1.7047.tar.gz \
 	&& cd App-cpanminus-1.7047 \
