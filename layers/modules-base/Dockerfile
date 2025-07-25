@@ -29,14 +29,14 @@ RUN cd /tmp \
 	&& /usr/local/bin/perl bin/cpanm --verbose . \
 	&& which cpanm \
 	&& cd /root \
-	&& /usr/local/bin/cpanm --verbose --no-test \
+	&& /usr/local/bin/cpanm --notest \
+		App::Cpan \
 		ExtUtils::MakeMaker \
 		HTTP::Tiny \
 		Net::SSLeay \
 		IO::Socket::SSL \
 		LWP \
 		LWP::Protocol::https \
-		Mojolicious \
 		Term::ReadLine \
 		Test::CPAN::Changes \
 		Test::Exception \
