@@ -8,6 +8,13 @@ jobs:
     modules:
         environment: docker-hub
         runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                args:
+                    - 5.42.0
+                    - 5.8.9
+                    - 5.16.3
+                    - 5.18.4
         steps:
             # https://github.com/docker/login-action
             - id: login
@@ -27,5 +34,5 @@ jobs:
             - id: build-perl-modules
               name: Build modules
               run: |
-                perl layers/modules-base/build-modules-base-images.pl
+                perl layers/modules-base/build-modules-base-images.pl ${{matrix.args}}
 
