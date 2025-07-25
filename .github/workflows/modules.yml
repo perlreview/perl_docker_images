@@ -24,8 +24,8 @@ jobs:
               name: Set up Docker Buildx
               uses: docker/setup-buildx-action@v3
             - uses: actions/checkout@v3
-            - id: build-perl-5-40-2-modules
-              name: Build modules for 5.40.2
+            - id: build-perl-modules
+              name: Build modules
               run: |
-                perl layers/modules-base/build-modules-base-images.pl 5.40.2
+                perl layers/modules-base/build-modules-base-images.pl
 
