@@ -21,7 +21,6 @@ USER root
 
 ENV OPENSSLDIR=/usr/lib/ssl
 ENV OPENSSL_PREFIX=/usr
-ENV MAKEFILE_PL
 ENV PERL_CPANM_OPT=--verbose
 
 RUN cd /tmp \
