@@ -20,7 +20,7 @@ LABEL org.opencontainers.image.authors="briandfoy@pobox.com" \
 USER root
 
 ENV OPENSSLDIR=/usr/lib/ssl
-ENV OPENSSL_PREFIX=/usr/lib/ssl
+ENV OPENSSL_PREFIX=/usr/include/openssl
 ENV PERL_CPANM_OPT=--verbose
 
 RUN cd /tmp \
