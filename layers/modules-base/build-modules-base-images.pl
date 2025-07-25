@@ -66,6 +66,7 @@ VERSION: foreach my $version ( @versions ) {
 	$args{digest}         = $info->{sha256};
 
 	my $rc = build_image( \%args );
+	exit 1 unless $rc == 0;
 	}
 
 # https://www.docker.com/blog/generate-sboms-with-buildkit/
