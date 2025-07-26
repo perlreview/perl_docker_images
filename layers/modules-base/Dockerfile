@@ -19,9 +19,7 @@ LABEL org.opencontainers.image.authors="briandfoy@pobox.com" \
 
 USER root
 
-ENV OPENSSLDIR=/usr/lib/ssl
 ENV OPENSSL_PREFIX=/usr
-ENV PERL_CPANM_OPT=--verbose
 
 RUN cd /tmp \
 	&& apt-get update && apt-get install -y pkg-config \
@@ -30,27 +28,27 @@ RUN cd /tmp \
 	&& cd App-cpanminus-1.7047 \
 	&& /usr/local/bin/perl -pi -e 's{http://(www\.cpan\.org|backpan\.perl\.org|cpan\.metacpan\.org|fastapi\.metacpan\.org|cpanmetadb\.plackperl\.org)}{https://$1}g' bin/cpanm \
 	&& /usr/local/bin/perl -pi -e 's{try_lwp=>1}{try_lwp=>0}g' bin/cpanm \
-	&& /usr/local/bin/perl bin/cpanm --verbose . \
+	&& /usr/local/bin/perl bin/cpanm . \
 	&& which cpanm \
 	&& cd /root \
-	&& /usr/local/bin/cpanm --configure-args="CCFLAGS=-I/usr/include" Net::SSLeay \
-	&& /usr/local/bin/cpanm --notest \
-		App::Cpan \
-		ExtUtils::MakeMaker \
-		HTTP::Tiny \
-		IO::Socket::SSL \
-		LWP \
-		LWP::Protocol::https \
-		Term::ReadLine \
-		Test::CPAN::Changes \
-		Test::Exception \
-		Test::Manifest \
-		Test::More \
-		Test::Output \
-		Test::Pod \
-		Test::Pod::Coverage \
-		XML::Entities \
-		YAML \
+	&& /usr/local/bin/cpanm --verbose Net::SSLeay \
+# 	&& /usr/local/bin/cpanm --notest \
+# 		App::Cpan \
+# 		ExtUtils::MakeMaker \
+# 		HTTP::Tiny \
+# 		IO::Socket::SSL \
+# 		LWP \
+# 		LWP::Protocol::https \
+# 		Term::ReadLine \
+# 		Test::CPAN::Changes \
+# 		Test::Exception \
+# 		Test::Manifest \
+# 		Test::More \
+# 		Test::Output \
+# 		Test::Pod \
+# 		Test::Pod::Coverage \
+# 		XML::Entities \
+# 		YAML \
 	&& rm -rf /tmp/* /root/.cpan /root/.cpanm
 
 ENV PATH="/usr/local/bin:${PATH}"
