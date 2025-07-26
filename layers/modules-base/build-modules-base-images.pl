@@ -8,6 +8,13 @@ use File::Spec::Functions qw(catfile);
 use FindBin;
 use JSON::PP qw(decode_json);
 
+my @platforms;
+while( $ARGV[0] and $ARGV[0] =~ /^[^5]/ ) {
+	push @platforms, shift @ARGV;
+	}
+
+@platforms = [ 'linux/386' ] unless @platforms;
+
 my %args = (
 	account       => 'perlreview',
 	commit        => do { `git rev-parse HEAD` =~ s/\s+\z//r },
@@ -19,8 +26,7 @@ my %args = (
 	perl_base_tag => 'latest',
 	repo_dir      => 'https://github.com/perlreview/perl_docker_images',
 	username      => 'perlreview',
-#	platforms     => [qw( linux/amd64 linux/arm64 linux/386 )],
-	platforms     => [qw( linux/386 )],
+	platforms     => \@platforms,
 	name          => "modules",
 	);
 
@@ -58,16 +64,21 @@ VERSION: foreach my $version ( @versions ) {
 	$args{perl_version} = $version;
 	$args{perl_minor_version} = $version =~ s/\A5\.\d+\K.*//r;
 
-	$args{tags} = [];
-	foreach my $tag ( $args{'image_version'}, 'latest' ) {
-		push $args{tags}->@*, map { sprintf '%s/%s-%s:%s', $args{account}, $_, $args{name}, $tag } @args{qw(perl_version perl_minor_version)};
+	foreach my $platform ( $args{platforms}->@* ) {
+		$args{tags} = [];
+		foreach my $tag ( $args{'image_version'} ) {
+			push $args{tags}->@*,
+				map { sprintf '%s/%s-%s-%s:%s', $args{account}, $_, $args{name}, $platform =~ s|.*/||r, $tag }
+				@args{qw(perl_version perl_minor_version)};
+			}
+
+		# base is already multi-platform
+		$args{perl_base_name} = "perl-$version-base";
+		$args{digest}         = $info->{sha256};
+
+		my $success = build_image( \%args );
+		exit 1 unless $success;
 		}
-
-	$args{perl_base_name} = "perl-$version-base";
-	$args{digest}         = $info->{sha256};
-
-	my $success = build_image( \%args );
-	exit 1 unless $success;
 	}
 
 # https://www.docker.com/blog/generate-sboms-with-buildkit/
@@ -82,7 +93,7 @@ sub build_image ($args) {
 		( map { ( '-t', $_ ) } $args->{tags}->@* ),
 		qw(--progress plain),
 		q(--sbom=true),
-		q(--platform),  join( ',', $args->{platforms}->@*),
+		q(--platform), $args->{platform},
 		q(--label),     qq(org.opencontainers.image.authors='Perl $args->{perl_version} with extras'),
 		q(--label),     qq(org.opencontainers.image.description='Perl $args->{perl_version} with extras'),
 		q(--label),     qq(org.opencontainers.image.revision=$args->{commit}),
