@@ -19,7 +19,8 @@ my %args = (
 	perl_base_tag => 'latest',
 	repo_dir      => 'https://github.com/perlreview/perl_docker_images',
 	username      => 'perlreview',
-	platforms     => [qw( linux/amd64 linux/arm64 linux/386 )],
+#	platforms     => [qw( linux/amd64 linux/arm64 linux/386 )],
+	platforms     => [qw( linux/arm64 linux/386 )],
 	name          => "modules",
 	);
 
