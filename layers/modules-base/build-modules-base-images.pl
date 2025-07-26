@@ -65,6 +65,7 @@ VERSION: foreach my $version ( @versions ) {
 	$args{perl_minor_version} = $version =~ s/\A5\.\d+\K.*//r;
 
 	foreach my $platform ( $args{platforms}->@* ) {
+		$args{platform} = $platform;
 		$args{tags} = [];
 		foreach my $tag ( $args{'image_version'} ) {
 			push $args{tags}->@*,
