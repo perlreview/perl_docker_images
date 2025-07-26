@@ -2,12 +2,39 @@
 name: build-modules-images
 
 on:
+    push:
+        paths:
+            - .github/workflows/modules.yml
     workflow_dispatch:
 
 jobs:
-    modules:
+    x86-amd64:
         environment: docker-hub
         runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                versions:
+#                    - 5.8.9
+                    - 5.10.1
+                    - 5.12.5
+                    - 5.14.4
+                    - 5.16.3
+                    - 5.18.4
+                    - 5.20.3
+                    - 5.22.4
+                    - 5.24.4
+                    - 5.26.3
+                    - 5.28.3
+                    - 5.30.3
+                    - 5.32.1
+                    - 5.34.3
+                    - 5.36.3
+                    - 5.38.4
+                    - 5.40.2
+                    - 5.42.0
+                platforms:
+                    - linux/amd64
+                    - linux/386
         steps:
             # https://github.com/docker/login-action
             - id: login
@@ -27,5 +54,4 @@ jobs:
             - id: build-perl-modules
               name: Build modules
               run: |
-                perl layers/modules-base/build-modules-base-images.pl
-
+                perl layers/modules-base/build-modules-base-images.pl ${{matrix.platforms}} ${{matrix.versions}}

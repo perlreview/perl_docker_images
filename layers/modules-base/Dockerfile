@@ -19,22 +19,21 @@ LABEL org.opencontainers.image.authors="briandfoy@pobox.com" \
 
 USER root
 
+ENV OPENSSL_PREFIX=/usr
+
 RUN cd /tmp \
 	&& curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7047.tar.gz \
 	&& tar -xzf App-cpanminus-1.7047.tar.gz \
 	&& cd App-cpanminus-1.7047 \
 	&& /usr/local/bin/perl -pi -e 's{http://(www\.cpan\.org|backpan\.perl\.org|cpan\.metacpan\.org|fastapi\.metacpan\.org|cpanmetadb\.plackperl\.org)}{https://$1}g' bin/cpanm \
 	&& /usr/local/bin/perl -pi -e 's{try_lwp=>1}{try_lwp=>0}g' bin/cpanm \
-	&& ls -lR \
-	&& /usr/local/bin/perl bin/cpanm --verbose . \
-	&& which cpanm \
-	&& cd /root \
+	&& /usr/local/bin/perl bin/cpanm . \
+	&& /usr/local/bin/cpanm --verbose URI \
+	&& /usr/local/bin/cpanm --verbose Net::SSLeay IO::Socket::SSL \
 	&& /usr/local/bin/cpanm --notest \
 		App::Cpan \
 		ExtUtils::MakeMaker \
 		HTTP::Tiny \
-		Net::SSLeay \
-		IO::Socket::SSL \
 		LWP \
 		LWP::Protocol::https \
 		Term::ReadLine \
@@ -46,7 +45,7 @@ RUN cd /tmp \
 		Test::Pod \
 		Test::Pod::Coverage \
 		XML::Entities \
-		YAML \
+ 		YAML \
 	&& rm -rf /tmp/* /root/.cpan /root/.cpanm
 
 ENV PATH="/usr/local/bin:${PATH}"
