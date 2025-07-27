@@ -57,6 +57,11 @@ VERSION: foreach my $version ( @versions ) {
 		next VERSION;
 		}
 
+	if( $version =~ m/^5\.[68]\./ ) {
+		warn "Skipping $version while it has trouble with Net::SSLeay.\n";
+		next VERSION;
+		}
+
 	my $compression = 'gz';
 	my $info = $version_info->{$version}{$compression};
 	next if $info->{minor} % 2;
