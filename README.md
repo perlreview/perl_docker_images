@@ -17,16 +17,16 @@ frequently.
 This project provides several layers of images:
 
 * existing foreign images
-* *base* - everything needed to build Perl and deal with CPAN
-* Perl-specific layers - basic *perl* installation with no extras
-* module-set layers - custom lists of modules for a particular purpose
+* *base* - everything needed to build perl with the defaults, but not building perl yet
+* Perl-specific layers - basic *perl* installation with no extras, with the *perl* installed under */usr/local* (so the system *perl* is the base system version)
+* module-set layers - custom lists of modules for a particular purpose, with each module being compatible with Perl v5.8
 
 For example, in testing Perl modules, various `Test::` modules, `Devel::Cover`,
 and other things will be already available. Use one of those images for
 testing without having to install anything.
 
 Additionally, all layers are available to anyone for any purpose, You
-might start with the perl layer
+might start with the perl layer and augment it however you like
 
 ## License
 
