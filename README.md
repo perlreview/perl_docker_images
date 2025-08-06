@@ -26,7 +26,14 @@ and other things will be already available. Use one of those images for
 testing without having to install anything.
 
 Additionally, all layers are available to anyone for any purpose, You
-might start with the perl layer and augment it however you like
+might start with the perl layer and augment it however you like.
+
+## Donations
+
+It costs a tiny amount to provide this:
+
+* Docker Hub organization is $17/month
+* GitHub Actions builds will probably be couple bucks.
 
 ## License
 
