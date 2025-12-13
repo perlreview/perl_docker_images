@@ -168,7 +168,7 @@ sub create_checksums ($hrefs, $start_fresh = 0) {
 	print {$fh} JSON->new->pretty->encode( $data );
 
 	return $data;
-	};
+	}
 
 sub get_dom ($start_fresh = 0) {
 	state $file = catfile( $data_dir, 'index.html' );
