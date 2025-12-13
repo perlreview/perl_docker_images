@@ -25,7 +25,7 @@ my %args = (
 		},
 	perl_base_tag => 'latest',
 	repo_dir      => 'https://github.com/perlreview/perl_docker_images',
-	username      => 'perlreview',
+	username      => 'briandfoy',
 	platforms     => \@platforms,
 	name          => "modules",
 	);
@@ -72,9 +72,9 @@ VERSION: foreach my $version ( @versions ) {
 	foreach my $platform ( $args{platforms}->@* ) {
 		$args{platform} = $platform;
 		$args{tags} = [];
-		foreach my $tag ( $args{'image_version'} ) {
+		foreach my $tag ( $args{'image_version'}, 'latest' ) {
 			push $args{tags}->@*,
-				map { sprintf '%s/%s-%s-%s:%s', $args{account}, $_, $args{name}, $platform =~ s|.*/||r, $tag }
+				map { sprintf '%s/%s/%s-%s-%s:%s', $args{registry}, $args{account}, $_, $args{name}, $platform =~ s|.*/||r, $tag }
 				@args{qw(perl_version perl_minor_version)};
 			}
 
@@ -104,10 +104,11 @@ sub build_image ($args) {
 		q(--label),     qq(org.opencontainers.image.description='Perl $args->{perl_version} with extras'),
 		q(--label),     qq(org.opencontainers.image.revision=$args->{commit}),
 		q(--label),     qq(org.opencontainers.image.created=$args->{date}),
-		q(--build-arg), qq(DOCKER_HUB_ACCOUNT=$args->{account}),
+		q(--build-arg), qq(ACCOUNT=$args->{account}),
 		q(--build-arg), qq(PERL_BASE_NAME=$args->{perl_base_name}),
 		q(--build-arg), qq(PERL_BASE_TAG=latest),
 		q(--build-arg), qq(PERL_VERSION=$args->{perl_version}),
+		q(--build-arg), qq(PERL_MINOR_VERSION=v$args->{perl_minor_version}),  # e.g. v5.30
 		q(--push),
 		$FindBin::Bin;
 

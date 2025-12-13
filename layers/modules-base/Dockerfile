@@ -1,14 +1,19 @@
 ARG PERL_BASE_NAME=replace_me
 ARG PERL_BASE_TAG=latest
-ARG DOCKER_HUB_ACCOUNT=perlreview
+ARG ACCOUNT=perlreview
+ARG REGISTRY=ghcr.io
+ARG PERL_VERSION=replaceme
 
-FROM ${DOCKER_HUB_ACCOUNT}/${PERL_BASE_NAME}:${PERL_BASE_TAG}
+FROM ${REGISTRY}/${ACCOUNT}/${PERL_BASE_NAME}:${PERL_BASE_TAG}
 ARG BUILDKIT_SBOM_SCAN_STAGE=true
 
 ARG PERL_BASE_NAME
 ARG PERL_BASE_TAG
-ARG DOCKER_HUB_ACCOUNT
+ARG ACCOUNT
+ARG PERL_VERSION
+ARG REGISTRY
 ARG REPO_DIR
+
 
 LABEL org.opencontainers.image.authors="briandfoy@pobox.com" \
 	org.opencontainers.image.title="Base image enhanced with modules for https://github.com/perlreview/perl_docker_images" \
@@ -48,5 +53,7 @@ RUN cd /tmp \
  		YAML \
 	&& rm -rf /tmp/* /root/.cpan /root/.cpanm
 
+ENV PERL_VERSION=${PERL_VERSION}
+ENV PERL_LWP_SSL_VERIFY_HOSTNAME=0
 ENV PATH="/usr/local/bin:${PATH}"
 CMD [ "/usr/local/bin/perl", "-de0" ]
