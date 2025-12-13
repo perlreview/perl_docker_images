@@ -1,15 +1,16 @@
 #!/bin/sh
 
+REGISTRY=ghcr.io
 COMMIT=$(git rev-parse HEAD)
 DATE=$(date -u +"%Y%m%d.%H%M%S")
-DOCKER_HUB_ACCOUNT=perlreview
+GITHUB_ACCOUNT=perlreview
 NAME=base
 VERSION=$DATE
-IMAGE_NAME=$DOCKER_HUB_ACCOUNT/$NAME
+IMAGE_NAME=$REGISTRY/$GITHUB_ACCOUNT/$NAME
 TAG=$IMAGE_NAME:$VERSION
 LATEST_TAG=$IMAGE_NAME:latest
 AUTHOR=briandfoy@pobox.com
-USERNAME=perlreview
+USERNAME=briandfoy
 BASE_IMAGE=debian:bookworm-slim
 CURRENT_BUILD_DIGEST_FILE=/tmp/$0-$$.digest
 PRIOR_BUILD_DIGEST_FILE=.digest.txt
@@ -37,7 +38,6 @@ docker buildx build . \
 	--label="org.opencontainers.image.created=$DATE" \
 	--label="version=$VERSION" \
 	--build-arg AUTHOR=${AUTHOR} \
-	--build-arg MAINTAINER=${MAINTAINER} \
 	--build-arg USERNAME=${USERNAME} \
 	--build-arg VENDOR=${VENDOR} \
 	--build-arg BASE_IMAGE=${BASE_IMAGE} \
