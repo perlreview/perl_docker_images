@@ -29,7 +29,7 @@ RUN apt-get update \
 	&& chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
 	&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
     && DEBIAN_FRONTEND=noninteractive apt update \
-    && DEBIAN_FRONTEND=noninteractive apt-get -y install gh \
+    && DEBIAN_FRONTEND=noninteractive apt-get -y install curl gh jq \
 	&& DEBIAN_FRONTEND=noninteractive apt-get clean \
 	&& DEBIAN_FRONTEND=noninteractive apt-get autoclean \
 	&& DEBIAN_FRONTEND=noninteractive apt-get autoremove \
