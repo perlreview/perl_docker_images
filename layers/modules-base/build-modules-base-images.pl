@@ -88,11 +88,13 @@ VERSION: foreach my $version ( @versions ) {
 		push @errors, \%args unless $success;
 		}
 
-	last VERSION;
 	}
 
 exit unless @errors;
-if( @errors ) { say dumper \@errors }
+if( @errors ) {
+	say dumper(\@errors);
+	exit 1;
+	}
 
 sub dumper { state $rc = require Data::Dumper; Data::Dumper->new([@_])->Indent(1)->Sortkeys(1)->Terse(1)->Useqq(1)->Dump }
 
