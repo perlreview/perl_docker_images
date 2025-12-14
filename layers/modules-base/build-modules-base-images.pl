@@ -13,7 +13,7 @@ while( $ARGV[0] and $ARGV[0] =~ /^[^5]/ ) {
 	push @platforms, shift @ARGV;
 	}
 
-@platforms = [ 'linux/386' ] unless @platforms;
+@platforms = qw( linux/arm64 ) unless @platforms;
 
 my %args = (
 	account       => 'perlreview',
