@@ -48,7 +48,7 @@ my @versions = do {
 	else            { $latest->@* }
 };
 
-VERSION: foreach my $version ( @versions ) {
+VERSION: foreach my $version ( sort { $a <=> $b } @versions ) {
 	unless( exists $version_info->{$version} ) {
 		warn "Do not have settings for <$version>. Skipping.\n";
 		next VERSION;
