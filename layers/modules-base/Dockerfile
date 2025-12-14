@@ -35,7 +35,7 @@ RUN cd /tmp \
 	&& /usr/local/bin/perl bin/cpanm --notest . \
 	&& cd /tmp \
 	&& /usr/local/bin/cpanm RJBS/Test-Fatal-0.017.tar.gz \
-	%% /usr/local/bin/cpanm URI \
+	&& /usr/local/bin/cpanm URI \
 	&& /usr/local/bin/cpanm --verbose Net::SSLeay IO::Socket::SSL \
 	&& /usr/local/bin/cpanm --notest \
 		App::Cpan \
