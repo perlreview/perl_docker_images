@@ -28,6 +28,7 @@ my %args = (
 	username      => 'briandfoy',
 	platforms     => \@platforms,
 	name          => "modules",
+	registry      => 'ghcr.io',
 	);
 
 my $version_info = do {
@@ -51,6 +52,7 @@ my @versions = do {
 	else            { sort $latest->@* }
 	};
 
+my @errors;
 VERSION: foreach my $version ( @versions ) {
 	unless( exists $version_info->{$version} ) {
 		warn "Do not have settings for <$version>. Skipping.\n";
@@ -83,9 +85,17 @@ VERSION: foreach my $version ( @versions ) {
 		$args{digest}         = $info->{sha256};
 
 		my $success = build_image( \%args );
-		exit 1 unless $success;
+		push @errors, \%args unless $success;
 		}
+
+	last VERSION;
 	}
+
+exit unless @errors;
+if( @errors ) { say dumper \@errors }
+
+sub dumper { state $rc = require Data::Dumper; Data::Dumper->new([@_])->Indent(1)->Sortkeys(1)->Terse(1)->Useqq(1)->Dump }
+
 
 # https://www.docker.com/blog/generate-sboms-with-buildkit/
 sub build_image ($args) {
