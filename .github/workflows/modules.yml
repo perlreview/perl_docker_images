@@ -4,6 +4,7 @@ name: build-modules-images
 permissions:
     contents: read
     packages: write
+
 on:
     push:
         paths:
@@ -12,7 +13,7 @@ on:
 
 jobs:
     x86-amd64:
-        environment: docker-hub
+        environment: ghcr
         runs-on: ubuntu-latest
         strategy:
             matrix:
@@ -45,7 +46,7 @@ jobs:
               with:
                 registry: ghcr.io
                 username: ${{ github.actor }}
-                password: ${{ secrets.GITHUB_TOKEN }}
+                password: ${{ secrets.PACKAGES_ADMIN_TOKEN }}
             # https://github.com/docker/setup-qemu-action
             - id: setup-buildx
               name: Set up Docker Buildx
