@@ -73,8 +73,9 @@ VERSION: foreach my $version ( @versions ) {
 
 	foreach my $platform ( $args{platforms}->@* ) {
 		$args{platform} = $platform;
+		$args{arch} = (split m|/|, $platform)[-1];
 		$args{tags} = [];
-		foreach my $tag ( $args{'image_version'}, 'latest' ) {
+		foreach my $tag ( $args{'image_version'}, 'latest', "$args{arch}-latest" ) {
 			push $args{tags}->@*,
 				map { sprintf '%s/%s/%s-%s-%s:%s', $args{registry}, $args{account}, $_, $args{name}, $platform =~ s|.*/||r, $tag }
 				@args{qw(perl_version perl_minor_version)};
