@@ -12,6 +12,11 @@ on:
             - layers/modules-base/build-modules-base-images.pl
             - layers/modules-base/Dockerfile
     workflow_dispatch:
+    workflow_run:
+        types:
+            - completed
+        workflows:
+            - perl-base
 
 jobs:
     x86-amd64:
