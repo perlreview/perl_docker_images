@@ -59,7 +59,7 @@ VERSION: foreach my $version ( @versions ) {
 		next VERSION;
 		}
 
-	if( $version =~ m/^5\.[68]\./ ) {
+	if( $version =~ m/^5\.6\./ ) {
 		warn "Skipping $version while it has trouble with Net::SSLeay.\n";
 		next VERSION;
 		}
