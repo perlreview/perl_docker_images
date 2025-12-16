@@ -62,4 +62,5 @@ jobs:
             - name: Show cpanm failures
               if: ${{ failure() }}
               run: |
+                ls -laR $HOME
                 cat /github/home/.cpanm/work/*/build.log
