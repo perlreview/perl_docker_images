@@ -26,6 +26,7 @@ RUN apt-get update \
 		libdevel-patchperl-perl \
 		libssl-dev \
 		make \
+		netbase \
 		tar \
 		xz-utils \
 		zlib1g-dev \
