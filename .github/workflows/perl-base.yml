@@ -39,4 +39,5 @@ jobs:
             - id: build-perl-modules
               name: Build modules
               run: |
-                perl layers/perl-base/build-perl-base-images.pl
+                cd layers/perl-base
+                perl build-perl-base-images.pl
