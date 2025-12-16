@@ -56,3 +56,7 @@ jobs:
               name: Build modules
               run: |
                 perl layers/modules-base/build-modules-base-images.pl ${{matrix.platforms}} ${{matrix.versions}}
+            - name: Show cpanm failures
+              if: ${{ failure() }}
+              run: |
+                cat /root/.cpanm/work/*/build.log
