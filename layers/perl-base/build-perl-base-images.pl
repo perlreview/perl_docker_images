@@ -6,8 +6,6 @@ use experimental qw(signatures);
 
 use FindBin;
 use JSON::PP qw(decode_json);
-use Mojo::File;
-use Mojo::Util qw(dumper);
 
 my %args = (
 	account       => 'perlreview',
@@ -26,8 +24,9 @@ my %args = (
 	);
 
 my $version_info = do {
-	my $version_data_file = Mojo::File->new("$FindBin::Bin/../../data/checksums.json");
-	my $json = $version_data_file->slurp;
+	local @ARGV = "$FindBin::Bin/../../data/checksums.json";
+	local $/;
+	my $json = <>;
 	decode_json( $json )->{data};
 	};
 
@@ -112,3 +111,5 @@ sub build_image ($args) {
 
 	return 1;
 	}
+
+sub dumper { state $rc = require Data::Dumper; Data::Dumper->new([@_])->Indent(1)->Sortkeys(1)->Terse(1)->Useqq(1)->Dump }
