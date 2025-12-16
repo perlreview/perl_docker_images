@@ -9,6 +9,7 @@ on:
     push:
         paths:
             - .github/workflows/modules.yml
+            - layers/modules-base/build-modules-base-images.pl
     workflow_dispatch:
 
 jobs:
