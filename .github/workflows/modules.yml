@@ -55,12 +55,4 @@ jobs:
             - id: build-perl-modules
               name: Build modules
               run: |
-                pwd
-                whoami
-                echo $HOME
                 perl layers/modules-base/build-modules-base-images.pl ${{matrix.platforms}} ${{matrix.versions}}
-            - name: Show cpanm failures
-              if: ${{ failure() }}
-              run: |
-                ls -laR $HOME
-                cat /github/home/.cpanm/work/*/build.log
