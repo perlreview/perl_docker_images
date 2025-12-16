@@ -26,13 +26,14 @@ my %args = (
 my $version_info = do {
 	local @ARGV = "$FindBin::Bin/../../data/checksums.json";
 	local $/;
-	my $json = <>;
+	my $json = <<>>;
 	decode_json( $json )->{data};
 	};
 
 my $latest = do {
-	my $version_data_file = Mojo::File->new("$FindBin::Bin/../../data/latest.json");
-	my $json = $version_data_file->slurp;
+	local @ARGV = "$FindBin::Bin/../../data/latest.json";
+	local $/;
+	my $json = <<>>;
 	my $data = decode_json( $json )->{data};
 
 	[
