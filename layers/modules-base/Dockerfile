@@ -35,7 +35,7 @@ RUN cd /tmp \
 	&& /usr/local/bin/perl -pi -e 's{try_lwp=>1}{try_lwp=>0}g' bin/cpanm \
 	&& /usr/local/bin/perl bin/cpanm --notest . \
 	&& cd /tmp \
-	&& /usr/local/bin/cpanm RJBS/Test-Fatal-0.017.tar.gz \
+	&& /usr/local/bin/cpanm RJBS/Test-Fatal-0.017.tar.gz PETDANCE/HTML-Tagset-3.24.tar.gz \
 	&& /usr/local/bin/cpanm --notest parent \
 	&& /usr/local/bin/cpanm URI \
 	&& /usr/local/bin/cpanm --verbose Net::SSLeay IO::Socket::SSL \
