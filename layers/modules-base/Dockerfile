@@ -32,7 +32,7 @@ RUN cd /tmp \
 	&& cd App-cpanminus-1.7047 \
 	&& /usr/local/bin/perl -pi -e 's{http://(www\.cpan\.org|backpan\.perl\.org|cpan\.metacpan\.org|fastapi\.metacpan\.org|cpanmetadb\.plackperl\.org)}{https://$1}g' bin/cpanm \
 	&& /usr/local/bin/perl -pi -e 's{try_lwp=>1}{try_lwp=>0}g' bin/cpanm \
-	&& (/usr/local/bin/perl bin/cpanm --notest . \
+	&& /usr/local/bin/perl bin/cpanm --notest . \
 	&& cd /tmp \
 	&& /usr/local/bin/cpanm RJBS/Test-Fatal-0.017.tar.gz \
 	&& /usr/local/bin/cpanm --notest parent \
