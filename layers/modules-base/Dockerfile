@@ -27,6 +27,7 @@ USER root
 ENV OPENSSL_PREFIX=/usr
 
 RUN cd /tmp \
+	&& printf "tcp 6 TCP\nudp 17 UDP\n" >> /etc/protocols \
 	&& curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7047.tar.gz \
 	&& tar -xzf App-cpanminus-1.7047.tar.gz \
 	&& cd App-cpanminus-1.7047 \
