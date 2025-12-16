@@ -35,6 +35,7 @@ RUN cd /tmp \
 	&& (/usr/local/bin/perl bin/cpanm --notest . \
 	&& cd /tmp \
 	&& /usr/local/bin/cpanm RJBS/Test-Fatal-0.017.tar.gz \
+	&& /usr/local/bin/cpanm --notest parent \
 	&& /usr/local/bin/cpanm URI \
 	&& /usr/local/bin/cpanm --verbose Net::SSLeay IO::Socket::SSL \
 	&& /usr/local/bin/cpanm --notest \
@@ -52,10 +53,8 @@ RUN cd /tmp \
 		Test::Pod \
 		Test::Pod::Coverage \
 		XML::Entities \
- 		YAML ) || (echo "cpanm failed, dumping logs:" && \
-                   find /root/.cpanm -name build.log -exec cat {} \; && \
-                exit 1)
-#	&& rm -rf /tmp/* /root/.cpan /root/.cpanm
+ 		YAML \
+ 	&& rm -rf /tmp/* /root/.cpan /root/.cpanm
 
 ENV PERL_VERSION=${PERL_VERSION}
 ENV PERL_LWP_SSL_VERIFY_HOSTNAME=0
