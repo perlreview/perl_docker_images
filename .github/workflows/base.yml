@@ -32,4 +32,5 @@ jobs:
             - id: build-base
               name: Build base image
               run: |
-                layers/base/build.sh
+                cd layers/base
+                ./build.sh
