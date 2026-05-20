@@ -15,6 +15,8 @@ while( $ARGV[0] and $ARGV[0] =~ /^[^5]/ ) {
 
 @platforms = qw( linux/arm64 ) unless @platforms;
 
+my $Dockerfile = catfile($FindBin::Bin, 'Dockerfile');
+
 my %args = (
 	account       => 'perlreview',
 	commit        => do { `git rev-parse HEAD` =~ s/\s+\z//r },
@@ -52,6 +54,8 @@ my @versions = do {
 	else            { sort $latest->@* }
 	};
 
+say "versions: @versions";
+
 my @errors;
 VERSION: foreach my $version ( @versions ) {
 	unless( exists $version_info->{$version} ) {
@@ -70,6 +74,8 @@ VERSION: foreach my $version ( @versions ) {
 
 	$args{perl_version} = $version;
 	$args{perl_minor_version} = $version =~ s/\A5\.\d+\K.*//r;
+
+	$args{dockerfile} = -e "$Dockerfile-$version" ? "$Dockerfile-$version" : $Dockerfile;
 
 	foreach my $platform ( $args{platforms}->@* ) {
 		$args{platform} = $platform;
@@ -104,10 +110,9 @@ sub dumper { state $rc = require Data::Dumper; Data::Dumper->new([@_])->Indent(1
 sub build_image ($args) {
 	local $ENV{BUILDKIT_PROGRESS} = 'plain';
 
-	my $Dockerfile = catfile($FindBin::Bin, 'Dockerfile');
 	my @command = qw(docker buildx build);
 	push @command,
-		q(-f), $Dockerfile,
+		q(-f), ( $args->{'dockerfile'} // $Dockerfile ),
 		q(--no-cache),
 		( map { ( '-t', $_ ) } $args->{tags}->@* ),
 		qw(--progress plain),
