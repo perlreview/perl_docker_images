@@ -14,4 +14,4 @@ Eventually these can expand to different types of compilation, but so far this w
 
 ## perl-modules
 
-The modules layer installs very modules into the layers from *perl-base*. This is a separate layer because this will be rebuilt often (weekly?) and installing perl each time takes awhile.
+The modules layer installs every modules into the layers from *perl-base*. This is a separate layer because this will be rebuilt often (weekly?) and installing perl each time takes awhile.

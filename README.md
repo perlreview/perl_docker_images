@@ -5,12 +5,7 @@
 There are various things we do while developing and testing Perl
 programs across several versions of Perl, and this repo provides the
 code to build those images. These are in
-[Docker Hub](https://hub.docker.com/repositories/perlreview).
-
-There is also [official Perl images from Docker](https://hub.docker.com/_/perl)
-maintained at [Perl/docker-perl](https://github.com/Perl/docker-perl).
-These are completely usable, basic installations that are updated
-frequently.
+[GitHub Packages](https://github.com/orgs/perlreview/packages).
 
 ## The Layers
 
@@ -28,12 +23,23 @@ testing without having to install anything.
 Additionally, all layers are available to anyone for any purpose, You
 might start with the perl layer and augment it however you like.
 
-## Donations
+## Use them in GitHub workflows.
 
-It costs a tiny amount to provide this:
+See some examples in [briandfoy/github_workflows](https://github.com/briandfoy/github_workflows).
 
-* Docker Hub organization is $17/month
-* GitHub Actions builds will probably be couple bucks.
+```
+jobs:
+    perl:
+        environment: automated_testing
+        runs-on: ${{ matrix.os }}
+        strategy:
+            matrix:
+                os:
+                    - ubuntu-latest
+                perl-version: [ 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42 ]
+        container:
+            image: ghcr.io/perlreview/5.${{ matrix.perl-version }}-modules-amd64
+```
 
 ## License
 
@@ -42,9 +48,7 @@ and there is a [LICENSE](LICENSE) file in the repository. In short,
 use what you find here, and if you want to distribute it, give it a
 different name.
 
-
 ## See Also
 
-* https://hub.docker.com/_/perl
 * https://docs.github.com/en/actions/how-tos/use-cases-and-examples/publishing-packages/publishing-docker-images#publishing-images-to-docker-hub-and-github-packages
 * https://docs.github.com/en/actions/reference/dockerfile-support-for-github-actions
