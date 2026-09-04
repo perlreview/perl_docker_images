@@ -9,7 +9,7 @@ jobs:
         container:
             image: briandfoy/perl5401:1.0
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v7
             - name: Platform check
               run: uname -a
             - name: Perl check
