@@ -71,7 +71,7 @@ mkdir $data_dir unless -d $data_dir;
 my $ua = Mojo::UserAgent->new;
 my $base_url = Mojo::URL->new('https://www.cpan.org/src/5.0/');
 
-my $start_fresh = 0;
+my $start_fresh = $ARGV[0] // 0;
 my $dom = get_dom($start_fresh);
 
 my $hrefs = $dom->find('a');
@@ -92,7 +92,7 @@ sub create_latest ($hrefs, $start_fresh = 0 ) {
 
 	my $perls = $hrefs
 		->map( sub { $_->attr('href') } )
-		->grep( sub { ! /bz2 | RC\d | \.txt | \.xz/x } )
+		->grep( sub { ! /bz2 | RC\d | sigstore | \.json | \.txt | \.xz/x } )
 		->map( sub {
 			[ $_, /perl-5\.(\d+)\.(\d+)\./ ]
 			} )
@@ -126,7 +126,7 @@ sub create_checksums ($hrefs, $start_fresh = 0) {
 	say STDERR "Recreating $file";
 
 	my $checksum_pattern = qr/(md5|sha(?:1|256))\.txt\z/;
-	my $file_pattern = qr/perl-(5\.(\d*[02468])\.(\d+))\./;
+	my $file_pattern = qr/perl-(5\.(\d*[02468])\.(\d+))\.(?!.*sigstore)/;
 
 	my $checksums = $hrefs
 		->map( sub { $_->attr('href') } )
@@ -143,7 +143,7 @@ sub create_checksums ($hrefs, $start_fresh = 0) {
 			} )
 		->to_array;
 
-	# say STDERR dumper( $checksums );
+	say STDERR dumper( $checksums );
 
 	my %checksums;
 	foreach my $tuple ( $checksums->@* ) {
