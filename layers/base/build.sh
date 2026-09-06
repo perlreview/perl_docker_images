@@ -21,7 +21,7 @@ find_up() {
 }
 
 SETTINGS_FILE=settings.json
-SETTINGS_PATH=$(find_up $SETTINGS_FILE 5)
+SETTINGS_PATH=$(find_up "$SETTINGS_FILE" 5)
 
 if [[ ! -f "$SETTINGS_PATH" ]]; then
   echo "File not found: $SETTINGS_FILE" >&2
@@ -29,22 +29,22 @@ if [[ ! -f "$SETTINGS_PATH" ]]; then
 fi
 SECTION=base
 
-AUTHORS=$(jq -r .authors $SETTINGS_PATH)
-BASE_IMAGE=$(jq -r --arg s "$SECTION" '.[$s].image' $SETTINGS_PATH)
+AUTHORS=$(jq -r .authors "$SETTINGS_PATH")
+BASE_IMAGE=$(jq -r --arg s "$SECTION" '.[$s].image' "$SETTINGS_PATH")
 COMMIT=$(git rev-parse HEAD)
 DESCRIPTION="The base layer that includes everything common among the Perl images from The Perl Review"
 DATE=$(date -u +"%Y%m%d.%H%M%S")
-GITHUB_ORG_ACCOUNT=$(jq -r .github_org_account $SETTINGS_PATH)
-GITHUB_USERNAME=$(jq -r .github_username $SETTINGS_PATH)
-LICENSES=$(jq -r .licenses $SETTINGS_PATH)
-NAME=$(jq -r --arg s "$SECTION" '.[$s].name' $SETTINGS_PATH)
-REGISTRY=$(jq -r .registry $SETTINGS_PATH)
-REPO=$(jq -r .repo_dir $SETTINGS_PATH)
+GITHUB_ORG_ACCOUNT=$(jq -r .github_org_account "$SETTINGS_PATH")
+GITHUB_USERNAME=$(jq -r .github_username "$SETTINGS_PATH")
+LICENSES=$(jq -r .licenses "$SETTINGS_PATH")
+NAME=$(jq -r --arg s "$SECTION" '.[$s].name' "$SETTINGS_PATH")
+REGISTRY=$(jq -r .registry "$SETTINGS_PATH")
+REPO=$(jq -r .repo_dir "$SETTINGS_PATH")
 REPO_RAW_BASE="$REPO/blob/$COMMIT"
 SOURCE="$REPO_RAW_BASE/layers/base/Dockerfile"
-TITLE=$(jq -r --arg s "$SECTION" '.[$s].title' $SETTINGS_PATH)
+TITLE=$(jq -r --arg s "$SECTION" '.[$s].title' "$SETTINGS_PATH")
 URL=https://github.com/orgs/$GITHUB_ORG_ACCOUNT/packages/container/package/base
-VENDOR=$(jq -r .vendor $SETTINGS_PATH)
+VENDOR=$(jq -r .vendor "$SETTINGS_PATH")
 VERSION=$DATE
 
 
@@ -55,8 +55,8 @@ TAG=$IMAGE_NAME:$VERSION
 
 # https://www.docker.com/blog/docker-best-practices-using-tags-and-labels-to-manage-docker-image-sprawl/
 docker buildx build . \
-	-t $TAG \
-	-t $LATEST_TAG \
+	-t "$TAG" \
+	-t "$LATEST_TAG" \
 	--platform linux/amd64,linux/arm64,linux/386 \
 	--progress plain \
 	--sbom true \
@@ -82,5 +82,5 @@ docker buildx build . \
 	--annotation "index:org.opencontainers.image.url=$URL" \
 	--annotation "index:org.opencontainers.image.vendor=$VENDOR" \
 	--annotation "index:org.opencontainers.image.version=$VERSION" \
-	--build-arg BASE_IMAGE=${BASE_IMAGE} \
+	--build-arg "BASE_IMAGE=${BASE_IMAGE}" \
 	--push
