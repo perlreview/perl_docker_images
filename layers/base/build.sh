@@ -74,4 +74,4 @@ docker buildx build . \
 	--label="org.opencontainers.image.vendor='$VENDOR'" \
 	--label="org.opencontainers.image.version=$VERSION" \
 	--build-arg BASE_IMAGE=${BASE_IMAGE}
-#	--push
+	--push
