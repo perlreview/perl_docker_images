@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -euox pipefail
 
 find_up() {
   local target="$1"
@@ -23,6 +23,7 @@ find_up() {
 
 SETTINGS_FILE=settings.json
 SETTINGS_PATH=$(find_up "$SETTINGS_FILE" 5)
+echo Settings Path "<$SETTINGS_PATH>"
 
 if [[ ! -f "$SETTINGS_PATH" ]]; then
   echo "File not found: $SETTINGS_FILE" >&2
@@ -48,11 +49,14 @@ URL=https://github.com/orgs/$GITHUB_ORG_ACCOUNT/packages/container/package/base
 VENDOR=$(jq -re .vendor "$SETTINGS_PATH")
 VERSION=$DATE
 
+echo Commit "<$COMMIT>"
 
 IMAGE_NAME="$REGISTRY/$GITHUB_ORG_ACCOUNT/$NAME"
 LATEST_TAG=$IMAGE_NAME:latest
 README_URL="$REPO_RAW_BASE/README.md"
 TAG=$IMAGE_NAME:$VERSION
+
+echo Image name "<$IMAGE_NAME>"
 
 # https://www.docker.com/blog/docker-best-practices-using-tags-and-labels-to-manage-docker-image-sprawl/
 docker buildx build . \
