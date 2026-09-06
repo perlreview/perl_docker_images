@@ -14,7 +14,8 @@
 "base": {
 	"description": "The base Debian layer that includes everything common among the Perl images from The Perl Review",
 	"image":       "debian:trixie-slim",
-	"name":        "base"
+	"name":        "base",
+	"title":       "Debian base for Perl images from The Perl Review"
 	},
 "perl-base": {
 	"image":       "",
