@@ -3,7 +3,7 @@
 "authors":          "brian d foy",
 "base_tag":         "latest",
 "licenses":         "Artistic-2.0",
-"platform_release": "Bookworm",
+"platform_release": "Trixie",
 "platform":         "Debian",
 "platforms":        [ "linux/amd64", "linux/arm64", "linux/386" ],
 "readme_url":       "https://github.com/perlreview/perl_docker_images/blob/master/README.md",
