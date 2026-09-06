@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
 find_up() {
   local target="$1"
@@ -29,22 +30,22 @@ if [[ ! -f "$SETTINGS_PATH" ]]; then
 fi
 SECTION=base
 
-AUTHORS=$(jq -r .authors "$SETTINGS_PATH")
-BASE_IMAGE=$(jq -r --arg s "$SECTION" '.[$s].image' "$SETTINGS_PATH")
+AUTHORS=$(jq -re .authors "$SETTINGS_PATH")
+BASE_IMAGE=$(jq -re --arg s "$SECTION" '.[$s].image' "$SETTINGS_PATH")
 COMMIT=$(git rev-parse HEAD)
 DESCRIPTION="The base layer that includes everything common among the Perl images from The Perl Review"
 DATE=$(date -u +"%Y%m%d.%H%M%S")
-GITHUB_ORG_ACCOUNT=$(jq -r .github_org_account "$SETTINGS_PATH")
-GITHUB_USERNAME=$(jq -r .github_username "$SETTINGS_PATH")
-LICENSES=$(jq -r .licenses "$SETTINGS_PATH")
-NAME=$(jq -r --arg s "$SECTION" '.[$s].name' "$SETTINGS_PATH")
-REGISTRY=$(jq -r .registry "$SETTINGS_PATH")
-REPO=$(jq -r .repo_dir "$SETTINGS_PATH")
+GITHUB_ORG_ACCOUNT=$(jq -re .github_org_account "$SETTINGS_PATH")
+GITHUB_USERNAME=$(jq -re .github_username "$SETTINGS_PATH")
+LICENSES=$(jq -re .licenses "$SETTINGS_PATH")
+NAME=$(jq -re --arg s "$SECTION" '.[$s].name' "$SETTINGS_PATH")
+REGISTRY=$(jq -re .registry "$SETTINGS_PATH")
+REPO=$(jq -re .repo_dir "$SETTINGS_PATH")
 REPO_RAW_BASE="$REPO/blob/$COMMIT"
 SOURCE="$REPO_RAW_BASE/layers/base/Dockerfile"
-TITLE=$(jq -r --arg s "$SECTION" '.[$s].title' "$SETTINGS_PATH")
+TITLE=$(jq -re --arg s "$SECTION" '.[$s].title' "$SETTINGS_PATH")
 URL=https://github.com/orgs/$GITHUB_ORG_ACCOUNT/packages/container/package/base
-VENDOR=$(jq -r .vendor "$SETTINGS_PATH")
+VENDOR=$(jq -re .vendor "$SETTINGS_PATH")
 VERSION=$DATE
 
 
