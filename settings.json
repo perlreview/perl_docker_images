@@ -1,0 +1,28 @@
+{
+"github_org_account": "perlreview",
+"authors":          "brian d foy",
+"base_tag":         "latest",
+"licenses":         "Artistic-2.0",
+"platform_release": "Bookworm",
+"platform":         "Debian",
+"platforms":        [ "linux/amd64", "linux/arm64", "linux/386" ],
+"readme_url":       "https://github.com/perlreview/perl_docker_images/blob/master/README.md",
+"registry":         "ghcr.io",
+"repo_dir":         "https://github.com/perlreview/perl_docker_images",
+"github_username":  "briandfoy",
+"vendor":           "The Perl Review",
+"base": {
+	"image":       "debian:trixie-slim",
+	"name":        "base"
+	},
+"perl-base": {
+	"image":       "",
+	"name":        "perl-base",
+	"title":       ""
+	},
+"modules-base": {
+	"image":        ""
+    "name":         "modules-base",
+    "title":        ""
+	}
+}
