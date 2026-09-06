@@ -58,18 +58,29 @@ docker buildx build . \
 	-t $TAG \
 	-t $LATEST_TAG \
 	--platform linux/amd64,linux/arm64,linux/386 \
-	--progress=plain \
-	--sbom=true \
-	--label="org.opencontainers.image.authors='$AUTHORS'" \
-	--label="org.opencontainers.image.created=$DATE" \
-	--label="org.opencontainers.image.description='$DESCRIPTION'" \
-	--label="org.opencontainers.image.documentation=$README_URL" \
-	--label="org.opencontainers.image.licenses='$LICENSES'" \
-	--label="org.opencontainers.image.revision=$COMMIT" \
-	--label="org.opencontainers.image.source=$SOURCE" \
-	--label="org.opencontainers.image.title='$TITLE'" \
-	--label="org.opencontainers.image.url=$URL" \
-	--label="org.opencontainers.image.vendor='$VENDOR'" \
-	--label="org.opencontainers.image.version=$VERSION" \
-	--build-arg BASE_IMAGE=${BASE_IMAGE}
+	--progress plain \
+	--sbom true \
+	--label "org.opencontainers.image.authors=$AUTHORS" \
+	--label "org.opencontainers.image.created=$DATE" \
+	--label "org.opencontainers.image.description=$DESCRIPTION" \
+	--label "org.opencontainers.image.documentation=$README_URL" \
+	--label "org.opencontainers.image.licenses=$LICENSES" \
+	--label "org.opencontainers.image.revision=$COMMIT" \
+	--label "org.opencontainers.image.source=$SOURCE" \
+	--label "org.opencontainers.image.title=$TITLE" \
+	--label "org.opencontainers.image.url=$URL" \
+	--label "org.opencontainers.image.vendor=$VENDOR" \
+	--label "org.opencontainers.image.version=$VERSION" \
+	--annotation "index:org.opencontainers.image.authors=$AUTHORS" \
+	--annotation "index:org.opencontainers.image.created=$DATE" \
+	--annotation "index:org.opencontainers.image.description=$DESCRIPTION" \
+	--annotation "index:org.opencontainers.image.documentation=$README_URL" \
+	--annotation "index:org.opencontainers.image.licenses=$LICENSES" \
+	--annotation "index:org.opencontainers.image.revision=$COMMIT" \
+	--annotation "index:org.opencontainers.image.source=$SOURCE" \
+	--annotation "index:org.opencontainers.image.title=$TITLE" \
+	--annotation "index:org.opencontainers.image.url=$URL" \
+	--annotation "index:org.opencontainers.image.vendor=$VENDOR" \
+	--annotation "index:org.opencontainers.image.version=$VERSION" \
+	--build-arg BASE_IMAGE=${BASE_IMAGE} \
 	--push
