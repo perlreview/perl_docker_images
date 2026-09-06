@@ -12,6 +12,7 @@
 "github_username":  "briandfoy",
 "vendor":           "The Perl Review",
 "base": {
+	"description": "The base Debian layer that includes everything common among the Perl images from The Perl Review",
 	"image":       "debian:trixie-slim",
 	"name":        "base"
 	},
