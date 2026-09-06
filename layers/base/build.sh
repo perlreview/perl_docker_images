@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 find_up() {
   local target="$1"
